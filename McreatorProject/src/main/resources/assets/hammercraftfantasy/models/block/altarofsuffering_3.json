@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/altarofsuffering_ud",
+    "up": "hammercraftfantasy:block/altarofsuffering_ud",
+    "north": "hammercraftfantasy:block/altarofsuffering_3",
+    "east": "hammercraftfantasy:block/altarofsuffering_3",
+    "south": "hammercraftfantasy:block/altarofsuffering_3",
+    "west": "hammercraftfantasy:block/altarofsuffering_3",
+    "particle": "hammercraftfantasy:block/altarofsuffering_ud"
+  },
+  "render_type": "solid"
+}

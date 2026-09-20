@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:hell_blade"
+    },
+    "title": {
+      "translate": "advancements.maliciousvisitors.title"
+    },
+    "description": {
+      "translate": "advancements.maliciousvisitors.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "maliciousvisitors_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "hammercraftfantasy:hell_blade",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:hammercraftfantasy"
+}

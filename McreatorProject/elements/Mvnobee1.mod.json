@@ -1,0 +1,35 @@
+{
+  "_fv": 85,
+  "_type": "feature",
+  "definition": {
+    "skipPlacement": false,
+    "generationStep": "SURFACE_STRUCTURES",
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Rotrainforest"
+      },
+      {
+        "value": "CUSTOM:Rotmarsh"
+      },
+      {
+        "value": "CUSTOM:Rotgarden"
+      },
+      {
+        "value": "CUSTOM:Rothill"
+      },
+      {
+        "value": "CUSTOM:PleasureGarden"
+      },
+      {
+        "value": "CUSTOM:Ngarden"
+      },
+      {
+        "value": "CUSTOM:Spalace"
+      },
+      {
+        "value": "CUSTOM:Pleasurebeach"
+      }
+    ],
+    "featurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"feature_container\" deletable=\"false\" x=\"40\" y=\"40\"><value name=\"feature\"><block type=\"feature_random_patch_simple\"><field name=\"tries\">192</field><field name=\"xzSpread\">16</field><field name=\"ySpread\">4</field><field name=\"schedule_tick\">FALSE</field><comment pinned=\"true\" h=\"122\" w=\"245\">This block represents a block patch feature. The blocks will only generate in valid positions (for example, grass will never generate on a stone block).Patches of plants should be generated during the VEGETAL_DECORATION stage.</comment><value name=\"block\"><block type=\"state_provider_weighted\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"11\"></mutation><field name=\"weight0\">1</field><field name=\"weight1\">2</field><field name=\"weight2\">1</field><field name=\"weight3\">10</field><field name=\"weight4\">10</field><field name=\"weight5\">10</field><field name=\"weight6\">10</field><field name=\"weight7\">10</field><field name=\"weight8\">10</field><field name=\"weight9\">40</field><field name=\"weight10\">10</field><value name=\"entry0\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.TORCHFLOWER</field></block></value><value name=\"entry1\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.WITHER_ROSE</field></block></value><value name=\"entry2\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.PITCHER_PLANT</field></block></value><value name=\"entry3\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.DOUBLE_PLANT#2</field></block></value><value name=\"entry4\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.TALLGRASS#1</field></block></value><value name=\"entry5\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.DOUBLE_PLANT#3</field></block></value><value name=\"entry6\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.RED_FLOWER#8</field></block></value><value name=\"entry7\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.RED_FLOWER#3</field></block></value><value name=\"entry8\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.RED_FLOWER#1</field></block></value><value name=\"entry9\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.YELLOW_FLOWER</field></block></value><value name=\"entry10\"><block type=\"blockstate_selector\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"0\"></mutation><field name=\"block\">Blocks.RED_FLOWER#0</field></block></value></block></value><value name=\"condition\"><block type=\"block_predicate_all_of\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"2\"></mutation><comment pinned=\"false\" h=\"80\" w=\"160\">Pumpkins need to verify two conditions to be placed.</comment><value name=\"condition0\"><block type=\"block_predicate_is_air\"><comment pinned=\"false\" h=\"80\" w=\"160\">Pumpkins can't replace other blocks</comment></block></value><value name=\"condition1\"><block type=\"block_predicate_matching_blocks\"><field name=\"x\">0</field><field name=\"y\">-1</field><field name=\"z\">0</field><comment pinned=\"false\" h=\"80\" w=\"160\">Pumpkins can only generate on grass blocks</comment><value name=\"blockSet\"><block type=\"block_holderset_list\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" inputs=\"2\"></mutation><field name=\"block0\">Blocks.GRASS</field><field name=\"block1\">Blocks.MOSS_BLOCK</field></block></value></block></value></block></value></block></value><next><block type=\"placement_rarity\"><field name=\"rarity\">4</field><comment pinned=\"false\" h=\"80\" w=\"160\">This is so the patch only generates in some of the chunks. The higher the value, the rarer the patch will be</comment><next><block type=\"placement_in_square\"><comment pinned=\"false\" h=\"83\" w=\"182\">We then move each patch horizontally. This way they don't generate only in the corner of the chunk</comment><next><block type=\"placement_heightmap\"><field name=\"heightmap\">MOTION_BLOCKING</field><comment pinned=\"false\" h=\"92\" w=\"165\">We then move the patches at the highest motion blocking block, so that they generate on the surface</comment><next><block type=\"placement_biome_filter\"><comment pinned=\"false\" h=\"80\" w=\"160\">We add a biome filter, so that the patches don't generate outside of the current biome</comment></block></next></block></next></block></next></block></next></block></xml>"
+  }
+}

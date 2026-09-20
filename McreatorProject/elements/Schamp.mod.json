@@ -1,0 +1,111 @@
+{
+  "_fv": 85,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "s_champ_hel",
+    "enableBody": true,
+    "textureBody": "s_champ_ch",
+    "enableLeggings": true,
+    "textureLeggings": "s_champ_leg",
+    "enableBoots": true,
+    "textureBoots": "s_champ_b",
+    "onBodyTick": {
+      "name": "Schampgiveeffect"
+    },
+    "creativeTabs": [
+      {
+        "value": "COMBAT"
+      },
+      {
+        "value": "CUSTOM:HammercraftFitems"
+      }
+    ],
+    "armorTextureFile": "s_champarmor",
+    "helmetName": "Slaanesh champion 头盔",
+    "bodyName": "Slaanesh champion 胸甲",
+    "leggingsName": "Slaanesh champion 护腿",
+    "bootsName": "Slaanesh champion 靴子",
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
+    "helmetModelName": "Models_champions_armor",
+    "helmetModelPart": "head",
+    "helmetModelTexture": "s_champarmor.png",
+    "bodyModelName": "Models_champions_armor",
+    "bodyModelPart": "body",
+    "armsModelPartL": "left_arm",
+    "armsModelPartR": "right_arm",
+    "bodyModelTexture": "s_champarmor.png",
+    "leggingsModelName": "Models_champions_armor",
+    "leggingsModelPartL": "left_leggings",
+    "leggingsModelPartR": "right_leggings",
+    "leggingsModelTexture": "s_champarmor.png",
+    "bootsModelName": "Models_champions_armor",
+    "bootsModelPartL": "left_boots",
+    "bootsModelPartR": "right_boots",
+    "bootsModelTexture": "s_champarmor.png",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetTranslucency": false,
+    "bodyTranslucency": false,
+    "leggingsTranslucency": false,
+    "bootsTranslucency": false,
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 40,
+    "damageValueHelmet": 6,
+    "damageValueBody": 8,
+    "damageValueLeggings": 8,
+    "damageValueBoots": 6,
+    "enchantability": 25,
+    "toughness": 3.0,
+    "knockbackResistance": 0.2,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [],
+    "rarity": "COMMON"
+  }
+}

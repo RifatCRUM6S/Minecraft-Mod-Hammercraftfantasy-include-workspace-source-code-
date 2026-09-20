@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "hammercraftfantasy:rotrainforest",
+    "hammercraftfantasy:rotmarsh",
+    "hammercraftfantasy:rotgarden",
+    "hammercraftfantasy:rothill",
+    "hammercraftfantasy:pleasure_garden",
+    "hammercraftfantasy:ngarden",
+    "hammercraftfantasy:spalace",
+    "hammercraftfantasy:pleasurebeach"
+  ],
+  "features": "hammercraftfantasy:mvnobee_1",
+  "step": "surface_structures"
+}

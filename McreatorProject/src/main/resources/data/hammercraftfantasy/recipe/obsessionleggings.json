@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "hammercraftfantasy:slaaneshtemplate"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "addition": {
+    "item": "hammercraftfantasy:obsessioningot"
+  },
+  "result": {
+    "id": "hammercraftfantasy:obsessionanddesire_leggings"
+  }
+}

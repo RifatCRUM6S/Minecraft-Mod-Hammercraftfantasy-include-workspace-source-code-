@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "hammercraftfantasy:pleasureplains",
+    "hammercraftfantasy:pleasurebeach",
+    "hammercraftfantasy:pleasure_garden",
+    "hammercraftfantasy:pleasurewastes",
+    "hammercraftfantasy:spalace"
+  ],
+  "spawners": {
+    "type": "hammercraftfantasy:steedofslaanesh",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

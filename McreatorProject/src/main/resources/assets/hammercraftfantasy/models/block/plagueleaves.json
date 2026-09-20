@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/plague_leaves",
+    "up": "hammercraftfantasy:block/plague_leaves",
+    "north": "hammercraftfantasy:block/plague_leaves",
+    "east": "hammercraftfantasy:block/plague_leaves",
+    "south": "hammercraftfantasy:block/plague_leaves",
+    "west": "hammercraftfantasy:block/plague_leaves",
+    "particle": "hammercraftfantasy:block/plague_leaves"
+  },
+  "render_type": "solid"
+}

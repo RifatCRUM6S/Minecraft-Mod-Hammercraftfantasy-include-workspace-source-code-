@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:keyofpalace"
+    },
+    "title": {
+      "translate": "advancements.cloyingair.title"
+    },
+    "description": {
+      "translate": "advancements.cloyingair.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cloyingair_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "hammercraftfantasy:championspalace"
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:agony"
+}

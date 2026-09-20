@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "hammercraftfantasy:block/crystalgrass",
+    "particle": "hammercraftfantasy:block/crystalgrass"
+  },
+  "render_type": "cutout"
+}

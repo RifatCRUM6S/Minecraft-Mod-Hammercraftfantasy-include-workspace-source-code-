@@ -1,0 +1,140 @@
+{
+  "_fv": 85,
+  "_type": "biome",
+  "definition": {
+    "name": "Bone forest",
+    "groundBlock": {
+      "value": "Blocks.GRASS"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.DIRT#0"
+    },
+    "underwaterBlock": {
+      "value": "Blocks.GRAVEL"
+    },
+    "airColor": {
+      "value": -13303808,
+      "falpha": 0.0
+    },
+    "fogColor": {
+      "value": -11788770,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -5102813,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -6603716,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -5439488,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -5439488,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": "CUSTOM:backgroundbusic2"
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": "CUSTOM:hammercraft_emptymusic"
+    },
+    "moodSound": {
+      "value": ""
+    },
+    "moodSoundDelay": 6000,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "ASH"
+    },
+    "particlesProbability": 0.5,
+    "rainingPossibility": 0.0,
+    "temperature": 2.0,
+    "spawnBiome": false,
+    "spawnInCaves": false,
+    "spawnBiomeNether": false,
+    "genTemperature": {
+      "min": 0.15,
+      "max": 1.0
+    },
+    "genHumidity": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "genContinentalness": {
+      "min": 0.15,
+      "max": 1.0
+    },
+    "genErosion": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "genWeirdness": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "genDepth": {
+      "min": 0.2,
+      "max": 0.9
+    },
+    "treesPerChunk": 5,
+    "vanillaTreeType": "Savanna trees",
+    "treeType": 1,
+    "minHeight": 9,
+    "treeStem": {
+      "value": "Blocks.BONE_BLOCK"
+    },
+    "treeBranch": {
+      "value": "Blocks.AIR"
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": "Blocks.NETHER_WART_BLOCK"
+    },
+    "defaultFeatures": [
+      "Ores",
+      "FrozenTopLayer",
+      "JungleGrass",
+      "DeadBushes"
+    ],
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnMineshaftMesa": false,
+    "spawnPillagerOutpost": false,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnSwampHut": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "spawnShipwreckBeached": false,
+    "spawnBuriedTreasure": false,
+    "oceanRuinType": "NONE",
+    "spawnNetherBridge": false,
+    "spawnNetherFossil": false,
+    "spawnBastionRemnant": false,
+    "spawnEndCity": false,
+    "spawnRuinedPortal": "NONE",
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:Bloodletter"
+        },
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 20,
+        "spawnType": "monster"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "hammercraftfantasy:pleasureplains",
+    "hammercraftfantasy:pleasurebeach",
+    "hammercraftfantasy:pleasure_garden",
+    "hammercraftfantasy:pleasurewastes",
+    "hammercraftfantasy:spalace"
+  ],
+  "spawners": {
+    "type": "hammercraftfantasy:deamonette",
+    "weight": 50,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

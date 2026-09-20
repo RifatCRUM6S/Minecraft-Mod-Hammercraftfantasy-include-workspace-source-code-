@@ -1,0 +1,27 @@
+{
+  "workspacePanelIconSize": "LIST",
+  "workspacePanelSortType": "CREATED",
+  "workspacePanelSortAscending": true,
+  "projectBrowserState": {
+    "expandedPaths": [
+      "[, HammercraftFantasy]",
+      "[, HammercraftFantasy, Resources (Gradle)]",
+      "[, HammercraftFantasy, Resources (Gradle), E:\\MCmonCreator\\McreatorProject\\src\\main\\resources\\data]",
+      "[, HammercraftFantasy, Resources (Gradle), E:\\MCmonCreator\\McreatorProject\\src\\main\\resources\\data, E:\\MCmonCreator\\McreatorProject\\src\\main\\resources\\data\\hammercraftfantasy]",
+      "[, HammercraftFantasy, Resources (Gradle), E:\\MCmonCreator\\McreatorProject\\src\\main\\resources\\data, E:\\MCmonCreator\\McreatorProject\\src\\main\\resources\\data\\hammercraftfantasy, E:\\MCmonCreator\\McreatorProject\\src\\main\\resources\\data\\hammercraftfantasy\\neoforge]"
+    ]
+  },
+  "leftDockState": {
+    "expandedDock": "project_browser",
+    "dockSizes": {
+      "project_browser": 329
+    }
+  },
+  "bottomDockState": {
+    "dockSizes": {
+      "console": 27,
+      "code_viewer": 300,
+      "debugger": 300
+    }
+  }
+}

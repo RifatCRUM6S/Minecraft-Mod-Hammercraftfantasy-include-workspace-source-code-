@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:deceitessence"
+    },
+    "title": {
+      "translate": "advancements.deceit.title"
+    },
+    "description": {
+      "translate": "advancements.deceit.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "deceit_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "hammercraftfantasy:deceitessence",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:otherrealm"
+}

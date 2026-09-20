@@ -1,0 +1,176 @@
+{
+  "_fv": 85,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Plaguebearer",
+    "mobLabel": "",
+    "mobModelName": "ModelPlaguebearer",
+    "mobModelTexture": "plaguebearer_skin1.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [],
+    "animations": [],
+    "modelWidth": 0.8,
+    "modelHeight": 2.3,
+    "modelShadowSize": 0.6,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -13408768,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "spawnEggTexture": "",
+    "creativeTabs": [
+      {
+        "value": "MISC"
+      }
+    ],
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 12,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.5,
+    "movementSpeed": 0.18,
+    "stepHeight": 0.6,
+    "armorBaseValue": 2.0,
+    "trackingRange": 64,
+    "followRange": 16,
+    "health": 60,
+    "xpAmount": 0,
+    "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
+    "flyingMob": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 99,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": false,
+    "immuneToCactus": false,
+    "immuneToDrowning": true,
+    "immuneToLightning": false,
+    "immuneToPotions": true,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": true,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": "CUSTOM:bp_breathing"
+    },
+    "hurtSound": {
+      "value": "CUSTOM:bp_hurt"
+    },
+    "deathSound": {
+      "value": "CUSTOM:pb_death"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "entityDataEntries": [],
+    "whenMobIsHurt": {
+      "name": "Nurgelmobsgethurt"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"java_code\"><field name=\"CODE\">this.targetSelector.addGoal(1, new net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal&lt;net.minecraft.world.entity.LivingEntity&gt;(this, net.minecraft.world.entity.LivingEntity.class, 10, true, false, target -&gt; target != null &amp;&amp; target.isAlive() &amp;&amp; !target.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse(\"hammercraftfantasy:nurgle_mobs\")))) { private int lockTicks = 0; private int rescanTicks = 0; private boolean isTargetValid(net.minecraft.world.entity.LivingEntity e) { return e != null &amp;&amp; e.isAlive() &amp;&amp; !e.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse(\"hammercraftfantasy:nurgle_mobs\"))); } @Override public boolean canUse() { net.minecraft.world.entity.LivingEntity lastHurtBy = this.mob.getLastHurtByMob(); if (lastHurtBy != null &amp;&amp; lastHurtBy.isAlive() &amp;&amp; lockTicks &lt;= 0 &amp;&amp; isTargetValid(lastHurtBy)) { this.target = lastHurtBy; this.lockTicks = 60; return true; } return super.canUse(); } @Override public void start() { super.start(); if (this.lockTicks &lt;= 0) { this.lockTicks = 40; } } @Override public void tick() { super.tick(); if (this.lockTicks &gt; 0) { this.lockTicks--; } this.rescanTicks++; if (this.rescanTicks &gt;= 40) { this.rescanTicks = 0; if (this.lockTicks &gt; 0) return; net.minecraft.world.entity.LivingEntity currentTarget = this.mob.getTarget(); if (currentTarget == null || !currentTarget.isAlive()) return; double currentDistSqr = this.mob.distanceToSqr(currentTarget); net.minecraft.world.entity.LivingEntity closest = this.mob.level().getEntitiesOfClass(net.minecraft.world.entity.LivingEntity.class, this.mob.getBoundingBox().inflate(24.0), e -&gt; isTargetValid(e)).stream().min(java.util.Comparator.comparingDouble(e -&gt; this.mob.distanceToSqr(e))).orElse(null); if (closest != null &amp;&amp; closest != currentTarget &amp;&amp; this.mob.distanceToSqr(closest) &lt; currentDistSqr - 9.0) { this.mob.setTarget(closest); this.target = closest; this.lockTicks = 40; } } } });</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 10,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 1,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Rotrainforest"
+      },
+      {
+        "value": "CUSTOM:Rotmarsh"
+      },
+      {
+        "value": "CUSTOM:Rotgarden"
+      },
+      {
+        "value": "CUSTOM:Rothill"
+      }
+    ],
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
+  }
+}

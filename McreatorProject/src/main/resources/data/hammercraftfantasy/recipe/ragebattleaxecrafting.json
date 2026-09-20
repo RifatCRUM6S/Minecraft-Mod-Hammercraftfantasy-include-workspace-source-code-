@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "ab",
+    "ac",
+    " c"
+  ],
+  "key": {
+    "a": {
+      "item": "hammercraftfantasy:demonsmetalingot"
+    },
+    "b": {
+      "item": "hammercraftfantasy:rageingot"
+    },
+    "c": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "id": "hammercraftfantasy:ragebattleaxe",
+    "count": 1
+  }
+}

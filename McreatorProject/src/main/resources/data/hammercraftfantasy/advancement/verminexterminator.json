@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:nchamp_helmet"
+    },
+    "title": {
+      "translate": "advancements.verminexterminator.title"
+    },
+    "description": {
+      "translate": "advancements.verminexterminator.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "verminexterminator_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "hammercraftfantasy:nchamp_chestplate",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:smellslikealatrine"
+}

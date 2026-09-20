@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:keyofgarden"
+    },
+    "title": {
+      "translate": "advancements.smellslikealatrine.title"
+    },
+    "description": {
+      "translate": "advancements.smellslikealatrine.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "smellslikealatrine_0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "hammercraftfantasy:ngarden"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:goodboy"
+}

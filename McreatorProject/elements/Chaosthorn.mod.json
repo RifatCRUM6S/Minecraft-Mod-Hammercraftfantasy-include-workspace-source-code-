@@ -1,0 +1,149 @@
+{
+  "_fv": 85,
+  "_type": "plant",
+  "definition": {
+    "renderType": 12,
+    "texture": "chaos_thorn",
+    "customModelName": "Cross model",
+    "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "plantType": "normal",
+    "suspiciousStewEffect": "WITHER",
+    "suspiciousStewDuration": 20,
+    "secondaryTreeChance": 0.1,
+    "trees": [
+      null,
+      null
+    ],
+    "flowerTrees": [
+      null,
+      null
+    ],
+    "megaTrees": [
+      null,
+      null
+    ],
+    "growapableSpawnType": "Plains",
+    "growapableMaxHeight": 0,
+    "customBoundingBox": false,
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
+        "subtract": false
+      }
+    ],
+    "name": "Chaosthorn",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:HammercraftFitems"
+      }
+    ],
+    "hardness": 0.1,
+    "resistance": 0.0,
+    "luminance": 0,
+    "unbreakable": false,
+    "isSolid": false,
+    "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "COMMON",
+    "immuneToFire": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "PLANT"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "useLootTableForDrops": false,
+    "customDrop": {
+      "value": "Items.STICK"
+    },
+    "dropAmount": 1,
+    "xpAmountMin": 0,
+    "xpAmountMax": 0,
+    "forceTicking": false,
+    "emissiveRendering": false,
+    "hasTileEntity": false,
+    "isReplaceable": false,
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "XZ",
+    "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
+    "ignitedByLava": false,
+    "flammability": 100,
+    "fireSpreadSpeed": 60,
+    "jumpFactor": 1.0,
+    "speedFactor": 1.0,
+    "canBePlacedOn": [],
+    "isBonemealable": false,
+    "frequencyOnChunks": 5,
+    "generateFeature": true,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Chaosplains"
+      },
+      {
+        "value": "CUSTOM:Chaoswastes"
+      },
+      {
+        "value": "CUSTOM:Chaoshill"
+      },
+      {
+        "value": "CUSTOM:Chaosbarrendforest"
+      },
+      {
+        "value": "CUSTOM:Bloodwastes"
+      },
+      {
+        "value": "CUSTOM:Bloodhill"
+      },
+      {
+        "value": "CUSTOM:Schemedesert"
+      },
+      {
+        "value": "CUSTOM:Schemewastes"
+      },
+      {
+        "value": "CUSTOM:Schemeforest2"
+      },
+      {
+        "value": "CUSTOM:Kthrone"
+      },
+      {
+        "value": "CUSTOM:Tlibrary"
+      }
+    ],
+    "generationType": "Flower",
+    "patchSize": 64,
+    "generateAtAnyHeight": false
+  }
+}

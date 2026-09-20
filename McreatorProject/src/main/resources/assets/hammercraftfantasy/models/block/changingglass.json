@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/changingglass",
+    "up": "hammercraftfantasy:block/changingglass",
+    "north": "hammercraftfantasy:block/changingglass",
+    "east": "hammercraftfantasy:block/changingglass",
+    "south": "hammercraftfantasy:block/changingglass",
+    "west": "hammercraftfantasy:block/changingglass",
+    "particle": "hammercraftfantasy:block/changingglass"
+  },
+  "render_type": "translucent"
+}

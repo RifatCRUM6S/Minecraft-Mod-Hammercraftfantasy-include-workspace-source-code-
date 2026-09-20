@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "hammercraftfantasy:bloodwastes",
+    "hammercraftfantasy:bloodhill",
+    "hammercraftfantasy:blood_forest_1",
+    "hammercraftfantasy:blood_forest_2",
+    "hammercraftfantasy:kthrone"
+  ],
+  "spawners": {
+    "type": "hammercraftfantasy:bloodletter",
+    "weight": 50,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "hammercraftfantasy:rotrainforest",
+    "hammercraftfantasy:rotmarsh",
+    "hammercraftfantasy:rotgarden",
+    "hammercraftfantasy:rothill",
+    "hammercraftfantasy:ngarden"
+  ],
+  "spawners": {
+    "type": "hammercraftfantasy:nurgling",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

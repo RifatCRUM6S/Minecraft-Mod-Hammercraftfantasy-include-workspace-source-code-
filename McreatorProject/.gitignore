@@ -1,0 +1,19 @@
+# Gradle 缓存与构建产物
+.gradle/
+build/
+bin/
+out/
+
+# IDE 与系统配置文件
+.eclipse/
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.DS_Store
+Thumbs.db
+
+# MCreator 本地运行测试环境与日志
+run/
+logs/

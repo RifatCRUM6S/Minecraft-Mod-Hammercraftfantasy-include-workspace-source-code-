@@ -1,0 +1,24 @@
+{
+  "_fv": 85,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "I nearly took it off",
+    "achievementDescription": "Suffer the attack of a Daemonette.",
+    "achievementIcon": {
+      "value": "Blocks.RED_FLOWER#0"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardXP": 0,
+    "achievementType": "task",
+    "parent": {
+      "value": "CUSTOM:Otherrealm"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"entity_hurt_player\"><field name=\"sourceentity\">CUSTOM:Demonez</field><field name=\"blocked\">FALSE</field><value name=\"minDamage\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value><value name=\"maxDamage\"><block type=\"math_number\"><field name=\"NUM\">20</field></block></value></block></next></block></xml>"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:book"
+    },
+    "title": {
+      "translate": "advancements.ihatereading.title"
+    },
+    "description": {
+      "translate": "advancements.ihatereading.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ihatereading_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "from": "hammercraftfantasy:championslibrary"
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:thekey"
+}

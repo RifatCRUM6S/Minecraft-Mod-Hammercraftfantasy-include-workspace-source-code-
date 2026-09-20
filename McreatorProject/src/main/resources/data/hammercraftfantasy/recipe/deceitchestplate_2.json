@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "hammercraftfantasy:tzeentchtemplate"
+  },
+  "base": {
+    "item": "hammercraftfantasy:demonsteelarmor_chestplate"
+  },
+  "addition": {
+    "item": "hammercraftfantasy:deceitingot"
+  },
+  "result": {
+    "id": "hammercraftfantasy:deceitandscheme_chestplate"
+  }
+}

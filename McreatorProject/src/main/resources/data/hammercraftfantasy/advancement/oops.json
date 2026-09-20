@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:trickystonebrick"
+    },
+    "title": {
+      "translate": "advancements.oops.title"
+    },
+    "description": {
+      "translate": "advancements.oops.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "oops_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "hammercraftfantasy:deceit"
+}

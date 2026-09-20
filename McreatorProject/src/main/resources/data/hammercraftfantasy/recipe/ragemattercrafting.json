@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "hammercraftfantasy:rageessence"
+    },
+    "b": {
+      "item": "minecraft:skeleton_skull"
+    }
+  },
+  "result": {
+    "id": "hammercraftfantasy:ragematter",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/mazecrystal",
+    "up": "hammercraftfantasy:block/mazecrystal",
+    "north": "hammercraftfantasy:block/mazecrystal",
+    "east": "hammercraftfantasy:block/mazecrystal",
+    "south": "hammercraftfantasy:block/mazecrystal",
+    "west": "hammercraftfantasy:block/mazecrystal",
+    "particle": "hammercraftfantasy:block/mazecrystal"
+  },
+  "render_type": "translucent"
+}

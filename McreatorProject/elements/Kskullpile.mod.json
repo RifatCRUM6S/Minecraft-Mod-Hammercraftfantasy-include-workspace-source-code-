@@ -1,0 +1,91 @@
+{
+  "_fv": 85,
+  "_type": "structure",
+  "definition": {
+    "structure": "k_skullpilestart",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
+    "spacing": 4,
+    "separation": 2,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Bloodwastes"
+      },
+      {
+        "value": "CUSTOM:Bloodhill"
+      },
+      {
+        "value": "CUSTOM:BloodForest1"
+      },
+      {
+        "value": "CUSTOM:BloodForest2"
+      },
+      {
+        "value": "CUSTOM:Kthrone"
+      }
+    ],
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "useStartHeight": false,
+    "startHeightProviderType": "UNIFORM",
+    "startHeightMin": 0,
+    "startHeightMax": 128,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": [
+      {
+        "poolName": "kpilepool",
+        "fallbackPool": "",
+        "poolParts": [
+          {
+            "weight": 3,
+            "structure": "k_skullpile_1",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "k_skullpile_2",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "k_skullpile_3",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "k_skullpile_4",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "k_skullpile_5",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "k_skullpile_6",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "k_skullpile_7",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          }
+        ]
+      }
+    ]
+  }
+}

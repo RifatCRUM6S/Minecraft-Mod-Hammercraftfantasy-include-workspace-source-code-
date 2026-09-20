@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "hammercraftfantasy:blocks/t_champion_summon_altar",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "hammercraftfantasy:t_champion_summon_altar"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "hammercraftfantasy:tchampalt_1",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 10,
+    "separation": 8,
+    "salt": 159134722
+  }
+}

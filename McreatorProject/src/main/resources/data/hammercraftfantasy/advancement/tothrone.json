@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:khornetemplate"
+    },
+    "title": {
+      "translate": "advancements.tothrone.title"
+    },
+    "description": {
+      "translate": "advancements.tothrone.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tothrone_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "hammercraftfantasy:championsthrone"
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:championsfall"
+}

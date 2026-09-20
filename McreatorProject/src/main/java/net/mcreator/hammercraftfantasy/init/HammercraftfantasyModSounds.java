@@ -1,0 +1,120 @@
+/*
+ *    MCreator note: This file will be REGENERATED on each build.
+ */
+package net.mcreator.hammercraftfantasy.init;
+
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+
+import net.mcreator.hammercraftfantasy.HammercraftfantasyMod;
+
+public class HammercraftfantasyModSounds {
+	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(Registries.SOUND_EVENT, HammercraftfantasyMod.MODID);
+	public static final DeferredHolder<SoundEvent, SoundEvent> SKARBRAND_MUSIC_1 = REGISTRY.register("skarbrand_music_1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "skarbrand_music_1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> K_CULTIST_1 = REGISTRY.register("k_cultist_1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "k_cultist_1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> K_CULTIST_2 = REGISTRY.register("k_cultist_2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "k_cultist_2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> K_WARRIOR_1 = REGISTRY.register("k_warrior_1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "k_warrior_1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> K_WARRIOR_2 = REGISTRY.register("k_warrior_2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "k_warrior_2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FLESHHOUND_1 = REGISTRY.register("fleshhound_1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "fleshhound_1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FLESHHOUND_2 = REGISTRY.register("fleshhound_2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "fleshhound_2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FLESHHOUND_3 = REGISTRY.register("fleshhound_3", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "fleshhound_3")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BACKGROUNDBUSIC1 = REGISTRY.register("backgroundbusic1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "backgroundbusic1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BACKGROUNDBUSIC2 = REGISTRY.register("backgroundbusic2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "backgroundbusic2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BACKGROUNDBUSIC3 = REGISTRY.register("backgroundbusic3", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "backgroundbusic3")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BACKGROUNDBUSIC4 = REGISTRY.register("backgroundbusic4", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "backgroundbusic4")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BACKGROUNDBUSIC5 = REGISTRY.register("backgroundbusic5", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "backgroundbusic5")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BACKGROUNDBUSIC6 = REGISTRY.register("backgroundbusic6", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "backgroundbusic6")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ROTFLY_BREATHING = REGISTRY.register("rotfly_breathing", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "rotfly_breathing")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ROTFLY_MOVING = REGISTRY.register("rotfly_moving", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "rotfly_moving")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ROTFLY_HURT = REGISTRY.register("rotfly_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "rotfly_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ROTFLY_DEATH = REGISTRY.register("rotfly_death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "rotfly_death")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> NURGLING_DEATH = REGISTRY.register("nurgling_death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "nurgling_death")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> NURGLING_HURT = REGISTRY.register("nurgling_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "nurgling_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> NURGLING_LAUGHT = REGISTRY.register("nurgling_laught", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "nurgling_laught")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BP_BREATHING = REGISTRY.register("bp_breathing", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "bp_breathing")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BP_HURT = REGISTRY.register("bp_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "bp_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> PB_DEATH = REGISTRY.register("pb_death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "pb_death")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> PB_BREATHING = REGISTRY.register("pb_breathing", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "pb_breathing")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> NAGOXO_BREATH = REGISTRY.register("nagoxo_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "nagoxo_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> NAGOXO_HURT = REGISTRY.register("nagoxo_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "nagoxo_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> NAGOXO_DEATH = REGISTRY.register("nagoxo_death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "nagoxo_death")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> GUO_LAUGH1 = REGISTRY.register("guo_laugh1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "guo_laugh1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> GUO_LAUGH2 = REGISTRY.register("guo_laugh2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "guo_laugh2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> GUO_HURT = REGISTRY.register("guo_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "guo_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> DARKTIDE40KMUSIC_IMPERIAL_ADVANCE = REGISTRY.register("darktide40kmusic_imperial_advance",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "darktide40kmusic_imperial_advance")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> HAVY_FOOT_STEPS = REGISTRY.register("havy_foot_steps", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "havy_foot_steps")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> TAMUR_BREATH = REGISTRY.register("tamur_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "tamur_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> TAMUR_HURT = REGISTRY.register("tamur_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "tamur_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> TAMUR_DEAD = REGISTRY.register("tamur_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "tamur_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> VALKIA_ATTACKVOIC1 = REGISTRY.register("valkia_attackvoic1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "valkia_attackvoic1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> VALKIA_ATTACKVOIC2 = REGISTRY.register("valkia_attackvoic2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "valkia_attackvoic2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> VALKIA_ATTACKVOIC3 = REGISTRY.register("valkia_attackvoic3", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "valkia_attackvoic3")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> VALKIA_DEAD = REGISTRY.register("valkia_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "valkia_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> DEAMON_BREATH = REGISTRY.register("deamon_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "deamon_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> DEAMON_HURT = REGISTRY.register("deamon_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "deamon_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> DEAMON_DEAD = REGISTRY.register("deamon_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "deamon_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> UB_HURT = REGISTRY.register("ub_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "ub_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> UB_BREATH = REGISTRY.register("ub_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "ub_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SIGVARD_ATTACK = REGISTRY.register("sigvard_attack", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "sigvard_attack")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SIGVARD_BREATH = REGISTRY.register("sigvard_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "sigvard_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SIGVARD_DEAD = REGISTRY.register("sigvard_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "sigvard_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SILVERGUARD_BREATH = REGISTRY.register("silverguard_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "silverguard_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SILVERGUARD_DEAD = REGISTRY.register("silverguard_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "silverguard_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SCREAMER_BREATH = REGISTRY.register("screamer_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "screamer_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SCREAMER_HURT = REGISTRY.register("screamer_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "screamer_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SCREAMER_DEAD = REGISTRY.register("screamer_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "screamer_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BLUEHORROR_BREATH = REGISTRY.register("bluehorror_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "bluehorror_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BLUEHORROR_DEAD = REGISTRY.register("bluehorror_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "bluehorror_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BLUEHORROR_HURT = REGISTRY.register("bluehorror_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "bluehorror_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> PINKHORROR_BREATH = REGISTRY.register("pinkhorror_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "pinkhorror_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> PINKHORROR_HURT = REGISTRY.register("pinkhorror_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "pinkhorror_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FLAMER_BREATH = REGISTRY.register("flamer_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "flamer_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FLAMER_HURT = REGISTRY.register("flamer_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "flamer_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FLAMER_DEAD = REGISTRY.register("flamer_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "flamer_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> TZAANGOR_BREATH = REGISTRY.register("tzaangor_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "tzaangor_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> TZAANGOR_HURT = REGISTRY.register("tzaangor_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "tzaangor_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> TZAANGOR_DEAD = REGISTRY.register("tzaangor_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "tzaangor_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ERIC_BREATH = REGISTRY.register("eric_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "eric_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ERIC_DEAD = REGISTRY.register("eric_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "eric_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ERIC_ATTACK1 = REGISTRY.register("eric_attack1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "eric_attack1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ERIC_ATTACK2 = REGISTRY.register("eric_attack2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "eric_attack2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ERIC_ATTACK3 = REGISTRY.register("eric_attack3", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "eric_attack3")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SIGVALD_MUSIC = REGISTRY.register("sigvald_music", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "sigvald_music")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FORSAKEN_BREATH = REGISTRY.register("forsaken_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "forsaken_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FORSAKEN_HURT = REGISTRY.register("forsaken_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "forsaken_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FORSAKEN_DEAD = REGISTRY.register("forsaken_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "forsaken_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CHAOSSPAWN_BREATH = REGISTRY.register("chaosspawn_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "chaosspawn_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CHAOSSPAWN_HURT = REGISTRY.register("chaosspawn_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "chaosspawn_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CHAOSSPAWN_DEAD = REGISTRY.register("chaosspawn_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "chaosspawn_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> VALKIA_MUSIC = REGISTRY.register("valkia_music", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "valkia_music")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SPAWN_MUSIC = REGISTRY.register("spawn_music", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "spawn_music")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ESPAWN_BREATH = REGISTRY.register("espawn_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "espawn_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ESPAWN_HURT = REGISTRY.register("espawn_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "espawn_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ESPAWN_DEAD = REGISTRY.register("espawn_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "espawn_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ERIC_MUSIC = REGISTRY.register("eric_music", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "eric_music")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ERIC_DYING = REGISTRY.register("eric_dying", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "eric_dying")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FIEND_BREATH = REGISTRY.register("fiend_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "fiend_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FIEND_HURT = REGISTRY.register("fiend_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "fiend_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> FIEND_DEAD = REGISTRY.register("fiend_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "fiend_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> STEED_BREATH = REGISTRY.register("steed_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "steed_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> STEED_HURT = REGISTRY.register("steed_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "steed_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> STEED_DEAD = REGISTRY.register("steed_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "steed_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> HAMMERCRAFT_EMPTYMUSIC = REGISTRY.register("hammercraft_emptymusic",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "hammercraft_emptymusic")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> TAMUR_MUSIC = REGISTRY.register("tamur_music", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "tamur_music")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BLOODLETTER_BREATH = REGISTRY.register("bloodletter_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "bloodletter_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BLOODLETTER_HURT = REGISTRY.register("bloodletter_hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "bloodletter_hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> BLOODLETTER_DEAD = REGISTRY.register("bloodletter_dead", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "bloodletter_dead")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SKARBRAND_BREATH = REGISTRY.register("skarbrand_breath", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "skarbrand_breath")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SKARBRAND_ATTACK1AND3 = REGISTRY.register("skarbrand_attack1and3",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "skarbrand_attack1and3")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SKARBRAND_ATTACK2 = REGISTRY.register("skarbrand_attack2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "skarbrand_attack2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SKARBRAND_ATTACK4 = REGISTRY.register("skarbrand_attack4", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "skarbrand_attack4")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> SKARBRAND_RANGEATTACK = REGISTRY.register("skarbrand_rangeattack",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "skarbrand_rangeattack")));
+}

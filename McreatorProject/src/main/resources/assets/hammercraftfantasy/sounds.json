@@ -1,0 +1,794 @@
+{
+  "skarbrand_music_1": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:skarbrand_music_1",
+        "stream": true
+      }
+    ]
+  },
+  "k_cultist_1": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:thin_fightandkill-soconvert",
+        "stream": false
+      }
+    ]
+  },
+  "k_cultist_2": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:thin_aw-soconvert",
+        "stream": false
+      }
+    ]
+  },
+  "k_warrior_1": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:havy_murduerforkhorne-soconvert",
+        "stream": false
+      }
+    ]
+  },
+  "k_warrior_2": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:war-soconvert",
+        "stream": false
+      }
+    ]
+  },
+  "fleshhound_1": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:heawwww-soconvert",
+        "stream": false
+      }
+    ]
+  },
+  "fleshhound_2": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:hurt-soconvert",
+        "stream": false
+      }
+    ]
+  },
+  "fleshhound_3": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:waaaa-soconvert",
+        "stream": false
+      }
+    ]
+  },
+  "backgroundbusic1": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:twh1_blackrose-00.00.05.090-00.02.16.301",
+        "stream": true
+      }
+    ]
+  },
+  "backgroundbusic2": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:twh1_domercy-00.00.04.263-00.01.47.773",
+        "stream": true
+      }
+    ]
+  },
+  "backgroundbusic3": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:twh1_emp-00.00.04.689-00.02.29.452",
+        "stream": false
+      }
+    ]
+  },
+  "backgroundbusic4": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:twh1_lintod-00.00.04.902-00.01.40.003",
+        "stream": true
+      }
+    ]
+  },
+  "backgroundbusic5": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:twh1_underdarkwald-00.00.04.902-00.01.42.573",
+        "stream": true
+      }
+    ]
+  },
+  "backgroundbusic6": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:twh3_k1-00.00.05.179-00.02.16.343",
+        "stream": true
+      }
+    ]
+  },
+  "rotfly_breathing": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:rotfly_breathing",
+        "stream": false
+      }
+    ]
+  },
+  "rotfly_moving": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:rotfly_moving",
+        "stream": false
+      }
+    ]
+  },
+  "rotfly_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:rotfly_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "rotfly_death": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:rotfly_death",
+        "stream": false
+      }
+    ]
+  },
+  "nurgling_death": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:nurgling_death",
+        "stream": false
+      }
+    ]
+  },
+  "nurgling_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:nurgling_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "nurgling_laught": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:nurgling_laught",
+        "stream": false
+      }
+    ]
+  },
+  "bp_breathing": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:plaguebearrer_breathing",
+        "stream": false
+      }
+    ]
+  },
+  "bp_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:plaguebearrer_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "pb_death": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:plaguebearrer_death",
+        "stream": false
+      }
+    ]
+  },
+  "pb_breathing": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:plaguebearrer_breathing",
+        "stream": false
+      }
+    ]
+  },
+  "nagoxo_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:usual",
+        "stream": false
+      }
+    ]
+  },
+  "nagoxo_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:hurt",
+        "stream": false
+      }
+    ]
+  },
+  "nagoxo_death": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:death",
+        "stream": false
+      }
+    ]
+  },
+  "guo_laugh1": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:guo_laugh1",
+        "stream": false
+      }
+    ]
+  },
+  "guo_laugh2": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:guo_laugh2",
+        "stream": false
+      }
+    ]
+  },
+  "guo_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:guo_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "darktide40kmusic_imperial_advance": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:40kdarktide_imperialadvance-00.00.06.860-00.02.02.942",
+        "stream": true
+      }
+    ]
+  },
+  "havy_foot_steps": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:havyfootsteps-00.00.06.830-00.00.07.571",
+        "stream": false
+      }
+    ]
+  },
+  "tamur_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:tamur_breath",
+        "stream": false
+      }
+    ]
+  },
+  "tamur_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:tamur_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "tamur_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:tamur_dead",
+        "stream": false
+      }
+    ]
+  },
+  "valkia_attackvoic1": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:valkia_attackvoic1",
+        "stream": false
+      }
+    ]
+  },
+  "valkia_attackvoic2": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:valkia_attackvoic2",
+        "stream": false
+      }
+    ]
+  },
+  "valkia_attackvoic3": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:valkia_attackvoic3",
+        "stream": false
+      }
+    ]
+  },
+  "valkia_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:valkia_dead",
+        "stream": false
+      }
+    ]
+  },
+  "deamon_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:deamonnette_breath",
+        "stream": false
+      }
+    ]
+  },
+  "deamon_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:deamonnette_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "deamon_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:deamonnette_dead",
+        "stream": false
+      }
+    ]
+  },
+  "ub_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:ubhurt",
+        "stream": false
+      }
+    ]
+  },
+  "ub_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:ublaugh",
+        "stream": false
+      }
+    ]
+  },
+  "sigvard_attack": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:sigvard_attack",
+        "stream": false
+      }
+    ]
+  },
+  "sigvard_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:sigvard_breath",
+        "stream": false
+      }
+    ]
+  },
+  "sigvard_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:sigvard_dead",
+        "stream": false
+      }
+    ]
+  },
+  "silverguard_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:silverguard_breath",
+        "stream": false
+      }
+    ]
+  },
+  "silverguard_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:silverguard_dead",
+        "stream": false
+      }
+    ]
+  },
+  "screamer_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:screamer_breath",
+        "stream": false
+      }
+    ]
+  },
+  "screamer_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:screamer_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "screamer_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:screamer_dead",
+        "stream": false
+      }
+    ]
+  },
+  "bluehorror_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:bluehorror_breath",
+        "stream": false
+      }
+    ]
+  },
+  "bluehorror_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:bluehorror_dead",
+        "stream": false
+      }
+    ]
+  },
+  "bluehorror_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:bluehorror_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "pinkhorror_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:pinkhorror_breath",
+        "stream": false
+      }
+    ]
+  },
+  "pinkhorror_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:pinkhorror_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "flamer_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:flamer_breath",
+        "stream": false
+      }
+    ]
+  },
+  "flamer_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:flamer_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "flamer_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:flamer_dead",
+        "stream": false
+      }
+    ]
+  },
+  "tzaangor_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:tzaagor_breath",
+        "stream": false
+      }
+    ]
+  },
+  "tzaangor_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:tzaagor_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "tzaangor_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:tzaagor_dead",
+        "stream": false
+      }
+    ]
+  },
+  "eric_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:eric_breath",
+        "stream": false
+      }
+    ]
+  },
+  "eric_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:eric_dead",
+        "stream": false
+      }
+    ]
+  },
+  "eric_attack1": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:eric_attack1",
+        "stream": false
+      }
+    ]
+  },
+  "eric_attack2": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:ecir_attack2",
+        "stream": false
+      }
+    ]
+  },
+  "eric_attack3": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:eric_attack3",
+        "stream": false
+      }
+    ]
+  },
+  "sigvald_music": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:sigvald_music",
+        "stream": true
+      }
+    ]
+  },
+  "forsaken_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:forsaken_breath",
+        "stream": false
+      }
+    ]
+  },
+  "forsaken_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:forsaken_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "forsaken_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:forsaken_dead",
+        "stream": false
+      }
+    ]
+  },
+  "chaosspawn_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:breath",
+        "stream": false
+      }
+    ]
+  },
+  "chaosspawn_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:hurt",
+        "stream": false
+      }
+    ]
+  },
+  "chaosspawn_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:dead",
+        "stream": false
+      }
+    ]
+  },
+  "valkia_music": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:valkia_music-00.00.04.520-00.02.28.243",
+        "stream": false
+      }
+    ]
+  },
+  "spawn_music": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:spawn_music",
+        "stream": true
+      }
+    ]
+  },
+  "espawn_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:espawn_born",
+        "stream": false
+      }
+    ]
+  },
+  "espawn_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:espawn_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "espawn_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:espawn_dead",
+        "stream": false
+      }
+    ]
+  },
+  "eric_music": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:eric_music-00.00.04.911-00.02.13.721",
+        "stream": true
+      }
+    ]
+  },
+  "eric_dying": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:eric_dead-00.00.07.416-00.00.11.724",
+        "stream": false
+      }
+    ]
+  },
+  "fiend_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:fiend_breath",
+        "stream": false
+      }
+    ]
+  },
+  "fiend_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:fiend_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "fiend_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:fiend_dead",
+        "stream": false
+      }
+    ]
+  },
+  "steed_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:steed_breath",
+        "stream": false
+      }
+    ]
+  },
+  "steed_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:steed_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "steed_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:steed_dead",
+        "stream": false
+      }
+    ]
+  },
+  "hammercraft_emptymusic": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:hammercraft_emptymusic-00.00.03.998-00.00.07.561",
+        "stream": true
+      }
+    ]
+  },
+  "tamur_music": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:tamur_music",
+        "stream": true
+      }
+    ]
+  },
+  "bloodletter_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:bloodletter_breath",
+        "stream": false
+      }
+    ]
+  },
+  "bloodletter_hurt": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:bloodletter_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "bloodletter_dead": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:bloodletter_dead",
+        "stream": false
+      }
+    ]
+  },
+  "skarbrand_breath": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:skarbrand_breath",
+        "stream": false
+      }
+    ]
+  },
+  "skarbrand_attack1and3": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:skarbrand_attack1and3",
+        "stream": false
+      }
+    ]
+  },
+  "skarbrand_attack2": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:skarbrand_attack2",
+        "stream": false
+      }
+    ]
+  },
+  "skarbrand_attack4": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:skarbrand_attack4",
+        "stream": false
+      }
+    ]
+  },
+  "skarbrand_rangeattack": {
+    "sounds": [
+      {
+        "name": "hammercraftfantasy:skarbrand_rangeattack",
+        "stream": false
+      }
+    ]
+  }
+}

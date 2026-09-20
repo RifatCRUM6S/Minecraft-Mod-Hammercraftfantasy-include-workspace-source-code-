@@ -1,0 +1,137 @@
+{
+  "_fv": 85,
+  "_type": "structure",
+  "definition": {
+    "structure": "n_ruin_start",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
+    "spacing": 4,
+    "separation": 1,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Rotrainforest"
+      },
+      {
+        "value": "CUSTOM:Rotmarsh"
+      },
+      {
+        "value": "CUSTOM:Rotgarden"
+      },
+      {
+        "value": "CUSTOM:Rothill"
+      },
+      {
+        "value": "CUSTOM:Ngarden"
+      }
+    ],
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "useStartHeight": false,
+    "startHeightProviderType": "UNIFORM",
+    "startHeightMin": 0,
+    "startHeightMax": 128,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": [
+      {
+        "poolName": "ruinpool",
+        "fallbackPool": "",
+        "poolParts": [
+          {
+            "weight": 1,
+            "structure": "n_ruin1",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 2,
+            "structure": "n_ruin2",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 2,
+            "structure": "n_ruin3",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 2,
+            "structure": "n_ruin4",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "n_ruin5",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "n_ruin6",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 3,
+            "structure": "n_ruin7",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 4,
+            "structure": "n_ruin8",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 4,
+            "structure": "n_ruin9",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 4,
+            "structure": "n_ruin10",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 2,
+            "structure": "n_ruin1",
+            "projection": "rigid",
+            "ignoredBlocks": [
+              {
+                "value": "CUSTOM:Plaguelog"
+              },
+              {
+                "value": "Blocks.POLISHED_BLACKSTONE"
+              },
+              {
+                "value": "Blocks.BLACKSTONE"
+              },
+              {
+                "value": "Blocks.CHISELED_POLISHED_BLACKSTONE"
+              },
+              {
+                "value": "Blocks.CHAIN"
+              },
+              {
+                "value": "Blocks.SKULL#0"
+              },
+              {
+                "value": "Blocks.CHEST"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

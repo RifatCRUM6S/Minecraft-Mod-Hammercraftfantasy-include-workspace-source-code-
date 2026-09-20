@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "hammercraftfantasy:nurgletemplate"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "addition": {
+    "item": "hammercraftfantasy:corruptioningot"
+  },
+  "result": {
+    "id": "hammercraftfantasy:corruptionandrot_leggings"
+  }
+}

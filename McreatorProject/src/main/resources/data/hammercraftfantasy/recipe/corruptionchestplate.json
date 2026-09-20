@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "hammercraftfantasy:nurgletemplate"
+  },
+  "base": {
+    "item": "minecraft:netherite_chestplate"
+  },
+  "addition": {
+    "item": "hammercraftfantasy:corruptioningot"
+  },
+  "result": {
+    "id": "hammercraftfantasy:corruptionandrot_chestplate"
+  }
+}

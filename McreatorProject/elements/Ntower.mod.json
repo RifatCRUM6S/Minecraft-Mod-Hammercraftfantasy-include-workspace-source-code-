@@ -1,0 +1,64 @@
+{
+  "_fv": 85,
+  "_type": "structure",
+  "definition": {
+    "structure": "n_towerstart",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
+    "spacing": 12,
+    "separation": 6,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Rotrainforest"
+      },
+      {
+        "value": "CUSTOM:Rotmarsh"
+      },
+      {
+        "value": "CUSTOM:Rotgarden"
+      },
+      {
+        "value": "CUSTOM:Rothill"
+      }
+    ],
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "useStartHeight": false,
+    "startHeightProviderType": "UNIFORM",
+    "startHeightMin": 0,
+    "startHeightMax": 128,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": [
+      {
+        "poolName": "ntowerpool",
+        "fallbackPool": "",
+        "poolParts": [
+          {
+            "weight": 1,
+            "structure": "n_tower_1",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "n_tower_2",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "n_tower_3",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          }
+        ]
+      }
+    ]
+  }
+}

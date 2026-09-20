@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "hammercraftfantasy:block/championspalace_portal_ew"
+    },
+    "axis=x": {
+      "model": "hammercraftfantasy:block/championspalace_portal_ns"
+    }
+  }
+}

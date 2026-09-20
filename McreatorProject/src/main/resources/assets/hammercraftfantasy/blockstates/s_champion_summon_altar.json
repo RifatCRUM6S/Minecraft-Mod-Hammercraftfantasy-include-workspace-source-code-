@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "s_chsumal=0": {
+      "model": "hammercraftfantasy:block/s_champion_summon_altar_0"
+    },
+    "s_chsumal=1": {
+      "model": "hammercraftfantasy:block/s_champion_summon_altar_1"
+    }
+  }
+}

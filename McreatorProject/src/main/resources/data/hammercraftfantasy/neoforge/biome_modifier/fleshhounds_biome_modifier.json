@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "hammercraftfantasy:blood_forest_1",
+    "hammercraftfantasy:blood_forest_2"
+  ],
+  "spawners": {
+    "type": "hammercraftfantasy:fleshhounds",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

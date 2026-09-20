@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:divineplague"
+    },
+    "title": {
+      "translate": "advancements.smellslikeshit.title"
+    },
+    "description": {
+      "translate": "advancements.smellslikeshit.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "smellslikeshit_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "hammercraftfantasy:divineplague",
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:corruption"
+}

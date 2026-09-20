@@ -1,0 +1,31 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "hammercraftfantasy:chaosplains",
+    "hammercraftfantasy:chaoswastes",
+    "hammercraftfantasy:chaoshill",
+    "hammercraftfantasy:chaosbarrendforest",
+    "hammercraftfantasy:bloodwastes",
+    "hammercraftfantasy:bloodhill",
+    "hammercraftfantasy:blood_forest_1",
+    "hammercraftfantasy:blood_forest_2",
+    "hammercraftfantasy:rotrainforest",
+    "hammercraftfantasy:rotmarsh",
+    "hammercraftfantasy:rotgarden",
+    "hammercraftfantasy:rothill",
+    "hammercraftfantasy:schemedesert",
+    "hammercraftfantasy:schemeforest",
+    "hammercraftfantasy:schemewastes",
+    "hammercraftfantasy:pleasureplains",
+    "hammercraftfantasy:pleasurebeach",
+    "hammercraftfantasy:pleasure_garden",
+    "hammercraftfantasy:schemeforest_2",
+    "hammercraftfantasy:pleasurewastes",
+    "hammercraftfantasy:kthrone",
+    "hammercraftfantasy:ngarden",
+    "hammercraftfantasy:tlibrary",
+    "hammercraftfantasy:spalace"
+  ],
+  "features": "hammercraftfantasy:demonsteelore",
+  "step": "underground_ores"
+}

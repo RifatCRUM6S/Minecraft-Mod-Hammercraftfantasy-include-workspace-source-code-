@@ -1,0 +1,61 @@
+{
+  "has_precipitation": false,
+  "temperature": 2,
+  "downfall": 0,
+  "effects": {
+    "ambient_sound": "hammercraftfantasy:backgroundbusic6",
+    "music": {
+      "sound": "hammercraftfantasy:hammercraft_emptymusic",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": true
+    },
+    "foliage_color": -5102813,
+    "grass_color": -5102813,
+    "sky_color": -13434880,
+    "fog_color": -11788770,
+    "water_color": -5439488,
+    "water_fog_color": -5439488
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "hammercraftfantasy:bloodletter",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [
+      "minecraft:fossil_upper",
+      "minecraft:fossil_lower"
+    ],
+    [
+      "minecraft:desert_well"
+    ],
+    [],
+    [
+      "minecraft:ore_gold_extra"
+    ],
+    [],
+    [],
+    [
+      "minecraft:patch_dead_bush_2"
+    ],
+    []
+  ]
+}

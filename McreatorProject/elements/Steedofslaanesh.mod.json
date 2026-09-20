@@ -1,0 +1,185 @@
+{
+  "_fv": 85,
+  "_type": "livingentity",
+  "definition": {
+    "mobName": "Steedofslaanesh",
+    "mobLabel": "",
+    "mobModelName": "Modelsteed_of_slaanesh",
+    "mobModelTexture": "steed_skin.png",
+    "transparentModelCondition": {
+      "fixedValue": false
+    },
+    "isShakingCondition": {
+      "fixedValue": false
+    },
+    "solidBoundingBox": {
+      "fixedValue": false
+    },
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "modelLayers": [],
+    "animations": [
+      {
+        "animation": {
+          "value": "CUSTOM:steed_of_slaaneshAnimation.breathing"
+        },
+        "speed": 1.0,
+        "walking": false,
+        "amplitude": 1.0
+      }
+    ],
+    "modelWidth": 0.9,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
+    "mountedYOffset": 0.0,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -26113,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "spawnEggTexture": "",
+    "creativeTabs": [
+      {
+        "value": "MISC"
+      }
+    ],
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 12,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 0.5,
+    "movementSpeed": 0.42,
+    "stepHeight": 2.0,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 24,
+    "health": 35,
+    "xpAmount": 10,
+    "waterMob": false,
+    "breatheUnderwater": {
+      "fixedValue": false
+    },
+    "pushedByFluids": {
+      "fixedValue": true
+    },
+    "flyingMob": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 99,
+    "disableCollisions": false,
+    "ridable": true,
+    "canControlForward": true,
+    "canControlStrafe": true,
+    "immuneToFire": false,
+    "immuneToArrows": false,
+    "immuneToFallDamage": true,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": false,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": "CUSTOM:steed_breath"
+    },
+    "hurtSound": {
+      "value": "CUSTOM:steed_hurt"
+    },
+    "deathSound": {
+      "value": "CUSTOM:steed_dead"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "entityDataEntries": [],
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"java_code\"><field name=\"CODE\">this.targetSelector.addGoal(1, new net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal&lt;net.minecraft.world.entity.LivingEntity&gt;(&amp;#10;    this, net.minecraft.world.entity.LivingEntity.class, 10, true, false, &amp;#10;    target -&gt; target != null &amp;#10;        &amp;&amp; target.isAlive() &amp;#10;        &amp;&amp; !target.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse(\"hammercraftfantasy:slaanesh_mobs\")))&amp;#10;) {&amp;#10;    private int lockTicks = 0;&amp;#10;    private int rescanTicks = 0;&amp;#10;&amp;#10;    @Override&amp;#10;    public boolean canUse() {&amp;#10;        net.minecraft.world.entity.LivingEntity lastHurtBy = this.mob.getLastHurtByMob();&amp;#10;        if (lastHurtBy != null &amp;&amp; lastHurtBy.isAlive() &amp;&amp; lockTicks &lt;= 0 &amp;&amp; isTargetValid(lastHurtBy)) {&amp;#10;            this.target = lastHurtBy;&amp;#10;            this.lockTicks = 60; // 强行锁敌 3 秒防抽陀螺&amp;#10;            return true;&amp;#10;        }&amp;#10;        return super.canUse();&amp;#10;    }&amp;#10;&amp;#10;    @Override&amp;#10;    public void start() {&amp;#10;        super.start();&amp;#10;        if (this.lockTicks &lt;= 0) {&amp;#10;            this.lockTicks = 40;&amp;#10;        }&amp;#10;    }&amp;#10;&amp;#10;    @Override&amp;#10;    public void tick() {&amp;#10;        super.tick();&amp;#10;        if (this.lockTicks &gt; 0) {&amp;#10;            this.lockTicks--;&amp;#10;        }&amp;#10;&amp;#10;        this.rescanTicks++;&amp;#10;        if (this.rescanTicks &gt;= 40) {&amp;#10;            this.rescanTicks = 0;&amp;#10;            if (this.lockTicks &gt; 0) return;&amp;#10;&amp;#10;            net.minecraft.world.entity.LivingEntity currentTarget = this.mob.getTarget();&amp;#10;            if (currentTarget == null || !currentTarget.isAlive()) return;&amp;#10;&amp;#10;            double currentDistSqr = this.mob.distanceToSqr(currentTarget);&amp;#10;            net.minecraft.world.entity.LivingEntity closest = this.mob.level().getEntitiesOfClass(&amp;#10;                net.minecraft.world.entity.LivingEntity.class, &amp;#10;                this.mob.getBoundingBox().inflate(24.0), &amp;#10;                e -&gt; isTargetValid(e)&amp;#10;            ).stream().min(java.util.Comparator.comparingDouble(e -&gt; this.mob.distanceToSqr(e))).orElse(null);&amp;#10;&amp;#10;            if (closest != null &amp;&amp; closest != currentTarget &amp;&amp; this.mob.distanceToSqr(closest) &lt; currentDistSqr - 9.0) {&amp;#10;                this.mob.setTarget(closest);&amp;#10;                this.target = closest;&amp;#10;                this.lockTicks = 40;&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;&amp;#10;    private boolean isTargetValid(net.minecraft.world.entity.LivingEntity e) {&amp;#10;        return e != null &amp;#10;            &amp;&amp; e.isAlive() &amp;#10;            &amp;&amp; !e.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse(\"hammercraftfantasy:slaanesh_mobs\")));&amp;#10;    }&amp;#10;});</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">TRUE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": true,
+    "tameable": true,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": true,
+    "spawningProbability": 20,
+    "mobSpawningType": "monster",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 3,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Pleasureplains"
+      },
+      {
+        "value": "CUSTOM:Pleasurebeach"
+      },
+      {
+        "value": "CUSTOM:PleasureGarden"
+      },
+      {
+        "value": "CUSTOM:Pleasurewastes"
+      },
+      {
+        "value": "CUSTOM:Spalace"
+      }
+    ],
+    "spawnInDungeons": false,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    }
+  }
+}

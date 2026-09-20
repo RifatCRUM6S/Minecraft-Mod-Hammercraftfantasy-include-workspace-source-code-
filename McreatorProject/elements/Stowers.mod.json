@@ -1,0 +1,82 @@
+{
+  "_fv": 85,
+  "_type": "structure",
+  "definition": {
+    "structure": "s_temple_start",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
+    "spacing": 10,
+    "separation": 4,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Pleasureplains"
+      },
+      {
+        "value": "CUSTOM:Pleasurebeach"
+      },
+      {
+        "value": "CUSTOM:PleasureGarden"
+      },
+      {
+        "value": "CUSTOM:Pleasurewastes"
+      }
+    ],
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "useStartHeight": false,
+    "startHeightProviderType": "UNIFORM",
+    "startHeightMin": 0,
+    "startHeightMax": 128,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": [
+      {
+        "poolName": "s_templepool",
+        "fallbackPool": "",
+        "poolParts": [
+          {
+            "weight": 4,
+            "structure": "s_temple_1",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 4,
+            "structure": "s_temple_2",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 4,
+            "structure": "s_temple_3",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "s_temple_4",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "s_temple_5",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          },
+          {
+            "weight": 1,
+            "structure": "k_skullpile_6",
+            "projection": "rigid",
+            "ignoredBlocks": []
+          }
+        ]
+      }
+    ]
+  }
+}

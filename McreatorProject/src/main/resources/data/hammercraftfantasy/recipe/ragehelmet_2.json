@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "hammercraftfantasy:khornetemplate"
+  },
+  "base": {
+    "item": "hammercraftfantasy:demonsteelarmor_helmet"
+  },
+  "addition": {
+    "item": "hammercraftfantasy:rageingot"
+  },
+  "result": {
+    "id": "hammercraftfantasy:rageandfury_helmet"
+  }
+}

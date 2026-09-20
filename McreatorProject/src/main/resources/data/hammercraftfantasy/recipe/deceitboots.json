@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "hammercraftfantasy:tzeentchtemplate"
+  },
+  "base": {
+    "item": "minecraft:netherite_boots"
+  },
+  "addition": {
+    "item": "hammercraftfantasy:deceitessence"
+  },
+  "result": {
+    "id": "hammercraftfantasy:deceitandscheme_boots"
+  }
+}

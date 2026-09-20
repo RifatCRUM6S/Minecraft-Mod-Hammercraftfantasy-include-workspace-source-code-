@@ -1,0 +1,23 @@
+{
+  "_fv": 85,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:Valkia.spawn_egg"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "item.trident.throw"
+    },
+    "igniteFire": false,
+    "disableGravity": false,
+    "disableDiscarding": true,
+    "power": 1.0,
+    "damage": 24.0,
+    "knockback": 0,
+    "entityModel": "Modelvalkiasspear",
+    "customModelTexture": "valkiasspear_skin.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5
+  }
+}

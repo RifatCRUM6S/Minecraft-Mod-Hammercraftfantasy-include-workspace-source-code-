@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hammercraftfantasy:plaguelog"
+    }
+  ],
+  "result": {
+    "id": "hammercraftfantasy:plagueplanks",
+    "count": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/crystalsand",
+    "up": "hammercraftfantasy:block/crystalsand",
+    "north": "hammercraftfantasy:block/crystalsand",
+    "east": "hammercraftfantasy:block/crystalsand",
+    "south": "hammercraftfantasy:block/crystalsand",
+    "west": "hammercraftfantasy:block/crystalsand",
+    "particle": "hammercraftfantasy:block/crystalsand"
+  },
+  "render_type": "solid"
+}

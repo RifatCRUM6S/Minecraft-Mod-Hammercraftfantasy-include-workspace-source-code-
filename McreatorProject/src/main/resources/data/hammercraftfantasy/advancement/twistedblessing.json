@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:ritualdagger"
+    },
+    "title": {
+      "translate": "advancements.twistedblessing.title"
+    },
+    "description": {
+      "translate": "advancements.twistedblessing.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "twistedblessing_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "hammercraftfantasy:maliciousvisitors"
+}

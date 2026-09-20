@@ -1,0 +1,134 @@
+{
+  "_fv": 85,
+  "_type": "biome",
+  "definition": {
+    "name": "Rotrainforest",
+    "groundBlock": {
+      "value": "Blocks.MOSS_BLOCK"
+    },
+    "undergroundBlock": {
+      "value": "Blocks.DIRT#0"
+    },
+    "underwaterBlock": {
+      "value": "Blocks.MUD"
+    },
+    "airColor": {
+      "value": -12628992,
+      "falpha": 0.0
+    },
+    "fogColor": {
+      "value": -12628992,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -8549327,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -13085427,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -11180288,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -11441365,
+      "falpha": 0.0
+    },
+    "ambientSound": {
+      "value": "CUSTOM:backgroundbusic5"
+    },
+    "additionsSound": {
+      "value": ""
+    },
+    "music": {
+      "value": "CUSTOM:hammercraft_emptymusic"
+    },
+    "moodSound": {
+      "value": ""
+    },
+    "moodSoundDelay": 6000,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "ASH"
+    },
+    "particlesProbability": 0.5,
+    "rainingPossibility": 0.5,
+    "temperature": 1.0,
+    "spawnBiome": false,
+    "spawnInCaves": false,
+    "spawnBiomeNether": false,
+    "genTemperature": {
+      "min": 0.15,
+      "max": 1.0
+    },
+    "genHumidity": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "genContinentalness": {
+      "min": -1.0,
+      "max": -0.15
+    },
+    "genErosion": {
+      "min": -1.0,
+      "max": 0.0
+    },
+    "genWeirdness": {
+      "min": -1.0,
+      "max": 0.0
+    },
+    "genDepth": {
+      "min": 0.0,
+      "max": 0.0
+    },
+    "treesPerChunk": 3,
+    "vanillaTreeType": "Big trees",
+    "treeType": 1,
+    "minHeight": 9,
+    "treeStem": {
+      "value": "CUSTOM:Plaguelog"
+    },
+    "treeBranch": {
+      "value": "CUSTOM:Plagueleaves"
+    },
+    "treeVines": {
+      "value": ""
+    },
+    "treeFruits": {
+      "value": ""
+    },
+    "defaultFeatures": [
+      "Ores",
+      "FrozenTopLayer",
+      "TaigaLargeFerns",
+      "TaigaGrassAndMushrooms",
+      "ReedsAndPumpkins",
+      "ForestGrass",
+      "JungleGrass",
+      "ForestFlowers"
+    ],
+    "spawnStronghold": false,
+    "spawnMineshaft": false,
+    "spawnMineshaftMesa": false,
+    "spawnPillagerOutpost": false,
+    "villageType": "none",
+    "spawnWoodlandMansion": false,
+    "spawnJungleTemple": false,
+    "spawnDesertPyramid": false,
+    "spawnSwampHut": false,
+    "spawnIgloo": false,
+    "spawnOceanMonument": false,
+    "spawnShipwreck": false,
+    "spawnShipwreckBeached": false,
+    "spawnBuriedTreasure": false,
+    "oceanRuinType": "NONE",
+    "spawnNetherBridge": false,
+    "spawnNetherFossil": false,
+    "spawnBastionRemnant": false,
+    "spawnEndCity": false,
+    "spawnRuinedPortal": "NONE",
+    "spawnEntries": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/altarofsuffering_ud",
+    "up": "hammercraftfantasy:block/s_chsumal_up_1",
+    "north": "hammercraftfantasy:block/s_championsummonaltar",
+    "east": "hammercraftfantasy:block/s_championsummonaltar",
+    "south": "hammercraftfantasy:block/s_championsummonaltar",
+    "west": "hammercraftfantasy:block/s_championsummonaltar",
+    "particle": "hammercraftfantasy:block/altarofsuffering_ud"
+  },
+  "render_type": "solid"
+}

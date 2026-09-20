@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "hammercraftfantasy:chaosplains",
+    "hammercraftfantasy:chaoswastes",
+    "hammercraftfantasy:chaoshill",
+    "hammercraftfantasy:chaosbarrendforest"
+  ],
+  "spawners": {
+    "type": "hammercraftfantasy:chaosspawn",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

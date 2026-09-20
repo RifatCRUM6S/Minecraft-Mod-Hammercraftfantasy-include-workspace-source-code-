@@ -1,0 +1,39 @@
+{
+  "_fv": 85,
+  "_type": "structure",
+  "definition": {
+    "structure": "s_altar_1",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
+    "spacing": 12,
+    "separation": 8,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Pleasureplains"
+      },
+      {
+        "value": "CUSTOM:Pleasurebeach"
+      },
+      {
+        "value": "CUSTOM:PleasureGarden"
+      },
+      {
+        "value": "CUSTOM:Pleasurewastes"
+      }
+    ],
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "useStartHeight": false,
+    "startHeightProviderType": "UNIFORM",
+    "startHeightMin": 0,
+    "startHeightMax": 128,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:grass_block",
+    "minecraft:dirt",
+    "minecraft:coarse_dirt",
+    "minecraft:stone",
+    "hammercraftfantasy:crystalsand",
+    "minecraft:gravel",
+    "minecraft:moss_block",
+    "minecraft:purpur_block"
+  ]
+}

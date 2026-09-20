@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "hammercraftfantasy:demonsmetalingot"
+    }
+  ],
+  "result": {
+    "id": "hammercraftfantasy:demonsmetalnugget",
+    "count": 9
+  }
+}

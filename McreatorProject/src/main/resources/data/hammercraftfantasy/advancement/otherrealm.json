@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "hammercraftfantasy:demon_essence"
+    },
+    "title": {
+      "translate": "advancements.otherrealm.title"
+    },
+    "description": {
+      "translate": "advancements.otherrealm.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "otherrealm_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "hammercraftfantasy:oceanofsouls"
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:twistedblessing"
+}

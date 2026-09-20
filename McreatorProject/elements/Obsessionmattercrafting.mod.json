@@ -1,0 +1,53 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Obsessionessence"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Obsessionessence"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Obsessionessence"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "CUSTOM:Obsessionessence"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Obsessionessence"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Obsessionmatter"
+    },
+    "name": "obsessionmattercrafting",
+    "namespace": "mod"
+  }
+}

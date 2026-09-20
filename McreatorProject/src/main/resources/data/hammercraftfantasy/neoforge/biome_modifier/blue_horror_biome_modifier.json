@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "hammercraftfantasy:schemedesert",
+    "hammercraftfantasy:schemeforest",
+    "hammercraftfantasy:schemewastes",
+    "hammercraftfantasy:schemeforest_2",
+    "hammercraftfantasy:tlibrary"
+  ],
+  "spawners": {
+    "type": "hammercraftfantasy:blue_horror",
+    "weight": 40,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

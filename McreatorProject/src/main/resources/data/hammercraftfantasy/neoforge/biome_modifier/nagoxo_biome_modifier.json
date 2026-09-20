@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "hammercraftfantasy:rotmarsh",
+  "spawners": {
+    "type": "hammercraftfantasy:nagoxo",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_fv": 85,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.BUBBLE_CORAL_FAN"
+    },
+    "showParticles": true,
+    "actionSound": {
+      "value": ""
+    },
+    "igniteFire": false,
+    "disableGravity": false,
+    "disableDiscarding": false,
+    "power": 0.6,
+    "damage": 12.0,
+    "knockback": 5,
+    "entityModel": "Default",
+    "customModelTexture": "pink_horror.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsPlayer": {
+      "name": "PinkHorrorArrow_HitPlayer"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "_fv": 85,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "rage_helmet",
+    "enableBody": true,
+    "textureBody": "rage_chestplate",
+    "enableLeggings": true,
+    "textureLeggings": "rage_legging",
+    "enableBoots": true,
+    "textureBoots": "rage_boots",
+    "onBodyTick": {
+      "name": "Rageandfury_giveeffect"
+    },
+    "creativeTabs": [
+      {
+        "value": "COMBAT"
+      },
+      {
+        "value": "CUSTOM:HammercraftFitems"
+      }
+    ],
+    "armorTextureFile": "rage_and_fury",
+    "helmetName": "Rage and fury头盔",
+    "bodyName": "Rage and fury胸甲",
+    "leggingsName": "Rageandfury护腿",
+    "bootsName": "Rageandfury靴子",
+    "helmetSpecialInformation": {
+      "fixedValue": []
+    },
+    "bodySpecialInformation": {
+      "fixedValue": []
+    },
+    "leggingsSpecialInformation": {
+      "fixedValue": []
+    },
+    "bootsSpecialInformation": {
+      "fixedValue": []
+    },
+    "helmetModelName": "ModelRage_and_fury",
+    "helmetModelPart": "head",
+    "helmetModelTexture": "rage_and_fury_layer_1.png",
+    "bodyModelName": "ModelRage_and_fury",
+    "bodyModelPart": "body",
+    "armsModelPartL": "left_arm",
+    "armsModelPartR": "right_arm",
+    "bodyModelTexture": "rage_and_fury_layer_1.png",
+    "leggingsModelName": "ModelRage_and_fury",
+    "leggingsModelPartL": "left_leggings",
+    "leggingsModelPartR": "right_leggings",
+    "leggingsModelTexture": "rage_and_fury_layer_1.png",
+    "bootsModelName": "ModelRage_and_fury",
+    "bootsModelPartL": "left_boots",
+    "bootsModelPartR": "right_boots",
+    "bootsModelTexture": "rage_and_fury_layer_1.png",
+    "helmetItemRenderType": 0,
+    "helmetItemCustomModelName": "Normal",
+    "bodyItemRenderType": 0,
+    "bodyItemCustomModelName": "Normal",
+    "leggingsItemRenderType": 0,
+    "leggingsItemCustomModelName": "Normal",
+    "bootsItemRenderType": 0,
+    "bootsItemCustomModelName": "Normal",
+    "helmetTranslucency": true,
+    "bodyTranslucency": false,
+    "leggingsTranslucency": false,
+    "bootsTranslucency": false,
+    "helmetImmuneToFire": false,
+    "bodyImmuneToFire": false,
+    "leggingsImmuneToFire": false,
+    "bootsImmuneToFire": false,
+    "helmetGlowCondition": {
+      "fixedValue": false
+    },
+    "bodyGlowCondition": {
+      "fixedValue": false
+    },
+    "leggingsGlowCondition": {
+      "fixedValue": false
+    },
+    "bootsGlowCondition": {
+      "fixedValue": false
+    },
+    "helmetPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bodyPiglinNeutral": {
+      "fixedValue": false
+    },
+    "leggingsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "bootsPiglinNeutral": {
+      "fixedValue": false
+    },
+    "maxDamage": 37,
+    "damageValueHelmet": 5,
+    "damageValueBody": 8,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 4,
+    "enchantability": 25,
+    "toughness": 4.0,
+    "knockbackResistance": 0.1,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "Items.NETHERITE_INGOT"
+      }
+    ],
+    "rarity": "UNCOMMON"
+  }
+}

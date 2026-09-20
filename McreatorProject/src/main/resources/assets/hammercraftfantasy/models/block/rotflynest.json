@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/rotflynest",
+    "up": "hammercraftfantasy:block/rotflynest",
+    "north": "hammercraftfantasy:block/rotflynest",
+    "east": "hammercraftfantasy:block/rotflynest",
+    "south": "hammercraftfantasy:block/rotflynest",
+    "west": "hammercraftfantasy:block/rotflynest",
+    "particle": "hammercraftfantasy:block/rotflynest"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/plague_planks",
+    "up": "hammercraftfantasy:block/plague_planks",
+    "north": "hammercraftfantasy:block/plague_planks",
+    "east": "hammercraftfantasy:block/plague_planks",
+    "south": "hammercraftfantasy:block/plague_planks",
+    "west": "hammercraftfantasy:block/plague_planks",
+    "particle": "hammercraftfantasy:block/plague_planks"
+  },
+  "render_type": "solid"
+}

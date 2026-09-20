@@ -1,0 +1,53 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:Corruptionessence"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Corruptionessence"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Corruptionessence"
+      },
+      {
+        "value": "Items.ROTTEN_FLESH"
+      },
+      {
+        "value": "CUSTOM:Corruptionessence"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Corruptionessence"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Corruptionmatter"
+    },
+    "name": "corruptionmattercrafting",
+    "namespace": "mod"
+  }
+}

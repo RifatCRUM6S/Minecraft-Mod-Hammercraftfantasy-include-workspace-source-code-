@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecraft:block/stone_bricks",
+    "up": "minecraft:block/stone_bricks",
+    "north": "hammercraftfantasy:block/tricky_stonebrick",
+    "east": "hammercraftfantasy:block/tricky_stonebrick",
+    "south": "hammercraftfantasy:block/tricky_stonebrick",
+    "west": "hammercraftfantasy:block/tricky_stonebrick",
+    "particle": "minecraft:block/stone_bricks"
+  },
+  "render_type": "solid"
+}

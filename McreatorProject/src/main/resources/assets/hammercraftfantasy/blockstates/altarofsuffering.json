@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "chargelevel=0": {
+      "model": "hammercraftfantasy:block/altarofsuffering_0"
+    },
+    "chargelevel=1": {
+      "model": "hammercraftfantasy:block/altarofsuffering_1"
+    },
+    "chargelevel=2": {
+      "model": "hammercraftfantasy:block/altarofsuffering_2"
+    },
+    "chargelevel=3": {
+      "model": "hammercraftfantasy:block/altarofsuffering_3"
+    },
+    "chargelevel=4": {
+      "model": "hammercraftfantasy:block/altarofsuffering_4"
+    }
+  }
+}

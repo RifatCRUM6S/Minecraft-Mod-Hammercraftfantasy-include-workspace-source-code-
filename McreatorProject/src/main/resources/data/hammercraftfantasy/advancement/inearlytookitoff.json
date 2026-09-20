@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:poppy"
+    },
+    "title": {
+      "translate": "advancements.inearlytookitoff.title"
+    },
+    "description": {
+      "translate": "advancements.inearlytookitoff.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "inearlytookitoff_0": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 0,
+            "max": 20
+          },
+          "source_entity": {
+            "type": "hammercraftfantasy:demonez"
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "parent": "hammercraftfantasy:otherrealm"
+}

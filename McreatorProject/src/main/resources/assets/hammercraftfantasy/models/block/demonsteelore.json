@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "hammercraftfantasy:block/demonsteelore",
+    "up": "hammercraftfantasy:block/demonsteelore",
+    "north": "hammercraftfantasy:block/demonsteelore",
+    "east": "hammercraftfantasy:block/demonsteelore",
+    "south": "hammercraftfantasy:block/demonsteelore",
+    "west": "hammercraftfantasy:block/demonsteelore",
+    "particle": "hammercraftfantasy:block/demonsteelore"
+  },
+  "render_type": "solid"
+}

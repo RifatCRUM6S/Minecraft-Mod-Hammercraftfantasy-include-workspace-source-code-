@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "hammercraftfantasy:saltar_1",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 12,
+    "separation": 8,
+    "salt": 629089563
+  }
+}

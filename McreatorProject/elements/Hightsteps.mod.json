@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Hightsteps",
+    "icon": "hight_steps",
+    "color": {
+      "value": -6180174,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onStarted": {
+      "name": "HightstepsZhuangTaiXiaoGuoKaiShiYingYongShi"
+    },
+    "onExpired": {
+      "name": "HightstepsZhuangTaiXiaoGuoJieShuShi"
+    }
+  }
+}

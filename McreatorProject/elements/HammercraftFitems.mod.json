@@ -1,0 +1,11 @@
+{
+  "_fv": 85,
+  "_type": "tab",
+  "definition": {
+    "name": "Hammercraft items",
+    "icon": {
+      "value": "CUSTOM:DemonEssence"
+    },
+    "showSearch": false
+  }
+}

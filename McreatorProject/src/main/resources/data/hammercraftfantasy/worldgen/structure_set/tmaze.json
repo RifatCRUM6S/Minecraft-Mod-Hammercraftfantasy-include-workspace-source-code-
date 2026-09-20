@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "hammercraftfantasy:tmaze",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 12,
+    "separation": 8,
+    "salt": 883961512
+  }
+}
