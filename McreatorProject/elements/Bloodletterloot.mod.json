@@ -30,7 +30,7 @@
             "item": {
               "value": "CUSTOM:Rageessence"
             },
-            "weight": 7,
+            "weight": 12,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
@@ -58,7 +58,7 @@
             "item": {
               "value": "Blocks.SKULL#0"
             },
-            "weight": 7,
+            "weight": 2,
             "minCount": 1,
             "maxCount": 1,
             "minEnchantmentLevel": 0,

@@ -22,10 +22,10 @@
       }
     ],
     "armorTextureFile": "n_champarmor",
-    "helmetName": "Nurgle champion 头盔",
-    "bodyName": "Nurgle champion 胸甲",
-    "leggingsName": "Nurgle champion 护腿",
-    "bootsName": "Nurgle champion 靴子",
+    "helmetName": "Nurgle champion helmet",
+    "bodyName": "Nurgle champion chestplate",
+    "leggingsName": "Nurgle champion legging",
+    "bootsName": "Nurgle champion boots",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
@@ -94,13 +94,13 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 40,
+    "maxDamage": 100,
     "damageValueHelmet": 6,
     "damageValueBody": 8,
     "damageValueLeggings": 8,
     "damageValueBoots": 6,
     "enchantability": 25,
-    "toughness": 5.0,
+    "toughness": 6.0,
     "knockbackResistance": 0.5,
     "equipSound": {
       "value": ""

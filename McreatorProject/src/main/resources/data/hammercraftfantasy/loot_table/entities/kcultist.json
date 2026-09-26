@@ -20,7 +20,7 @@
         {
           "type": "minecraft:item",
           "name": "hammercraftfantasy:demonsmetalnugget",
-          "weight": 15,
+          "weight": 23,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -34,7 +34,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:skeleton_skull",
-          "weight": 10,
+          "weight": 2,
           "functions": [
             {
               "function": "minecraft:set_count",

@@ -38,59 +38,77 @@ public class BloodletterEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.targetSelector.addGoal(1, new net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<net.minecraft.world.entity.LivingEntity>(this, net.minecraft.world.entity.LivingEntity.class, 10, true, false, target -> target != null
-				&& target.isAlive() && !target.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse("hammercraftfantasy:bloodletter_nottarget")))) {
-			private int lockTicks = 0;
-			private int rescanTicks = 0;
+		this.targetSelector.addGoal(1,
+				new net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<net.minecraft.world.entity.LivingEntity>(this, net.minecraft.world.entity.LivingEntity.class, 10, true, false, target -> target != null && target.isAlive()
+						&& target != this && !target.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse("hammercraftfantasy:bloodletter_nottarget")))) {
+					private int lockTicks = 0;
+					private int rescanTicks = 0;
 
-			@Override
-			public boolean canUse() {
-				net.minecraft.world.entity.LivingEntity lastHurtBy = this.mob.getLastHurtByMob();
-				if (lastHurtBy != null && lastHurtBy.isAlive() && lockTicks <= 0 && isTargetValid(lastHurtBy)) {
-					this.target = lastHurtBy;
-					this.lockTicks = 60; // 强行锁敌 3 秒防抽陀螺
-					return true;
-				}
-				return super.canUse();
-			}
-
-			@Override
-			public void start() {
-				super.start();
-				if (this.lockTicks <= 0) {
-					this.lockTicks = 40;
-				}
-			}
-
-			@Override
-			public void tick() {
-				super.tick();
-				if (this.lockTicks > 0) {
-					this.lockTicks--;
-				}
-				this.rescanTicks++;
-				if (this.rescanTicks >= 40) {
-					this.rescanTicks = 0;
-					if (this.lockTicks > 0)
-						return;
-					net.minecraft.world.entity.LivingEntity currentTarget = this.mob.getTarget();
-					if (currentTarget == null || !currentTarget.isAlive())
-						return;
-					double currentDistSqr = this.mob.distanceToSqr(currentTarget);
-					net.minecraft.world.entity.LivingEntity closest = this.mob.level().getEntitiesOfClass(net.minecraft.world.entity.LivingEntity.class, this.mob.getBoundingBox().inflate(24.0), e -> isTargetValid(e)).stream()
-							.min(java.util.Comparator.comparingDouble(e -> this.mob.distanceToSqr(e))).orElse(null);
-					if (closest != null && closest != currentTarget && this.mob.distanceToSqr(closest) < currentDistSqr - 9.0) {
-						this.mob.setTarget(closest);
-						this.target = closest;
-						this.lockTicks = 40;
+					@Override
+					public boolean canUse() {
+						// 1. 优先反击攻击者（必须验证合规性）
+						net.minecraft.world.entity.LivingEntity lastHurtBy = this.mob.getLastHurtByMob();
+						if (lastHurtBy != null && lastHurtBy.isAlive() && lockTicks <= 0 && isTargetValid(lastHurtBy)) {
+							this.target = lastHurtBy;
+							this.lockTicks = 60; // 强行锁敌 3 秒防抽陀螺
+							return true;
+						}
+						// 2. 检查原版索敌机制选出的目标，强制过滤掉非法目标
+						boolean canUse = super.canUse();
+						if (canUse && (this.target == null || !isTargetValid(this.target))) {
+							this.target = null;
+							return false;
+						}
+						return canUse;
 					}
-				}
-			}
 
-			private boolean isTargetValid(net.minecraft.world.entity.LivingEntity e) {
-				return e != null && e.isAlive() && !e.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse("hammercraftfantasy:bloodletter_nottarget")));
-			}
-		});
+					@Override
+					public boolean canContinueToUse() {
+						// 追击过程中若目标失效（如被打上标签或变成自身），立刻放弃
+						if (this.target != null && !isTargetValid(this.target)) {
+							return false;
+						}
+						return super.canContinueToUse();
+					}
+
+					@Override
+					public void start() {
+						super.start();
+						if (this.lockTicks <= 0) {
+							this.lockTicks = 40;
+						}
+					}
+
+					@Override
+					public void tick() {
+						super.tick();
+						if (this.lockTicks > 0) {
+							this.lockTicks--;
+						}
+						this.rescanTicks++;
+						if (this.rescanTicks >= 40) {
+							this.rescanTicks = 0;
+							if (this.lockTicks > 0)
+								return;
+							net.minecraft.world.entity.LivingEntity currentTarget = this.mob.getTarget();
+							if (currentTarget == null || !currentTarget.isAlive() || !isTargetValid(currentTarget))
+								return;
+							double currentDistSqr = this.mob.distanceToSqr(currentTarget);
+							net.minecraft.world.entity.LivingEntity closest = this.mob.level().getEntitiesOfClass(net.minecraft.world.entity.LivingEntity.class, this.mob.getBoundingBox().inflate(24.0), e -> isTargetValid(e)).stream()
+									.min(java.util.Comparator.comparingDouble(e -> this.mob.distanceToSqr(e))).orElse(null);
+							if (closest != null && closest != currentTarget && this.mob.distanceToSqr(closest) < currentDistSqr - 9.0) {
+								this.mob.setTarget(closest);
+								this.target = closest;
+								this.lockTicks = 40;
+							}
+						}
+					}
+
+					private boolean isTargetValid(net.minecraft.world.entity.LivingEntity e) {
+						return e != null && e.isAlive() && e != this.mob // 仅排除自身（防止自杀，允许攻击其他放血鬼）
+								&& !e.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse("hammercraftfantasy:bloodletter_nottarget")));
+					}
+				});
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {

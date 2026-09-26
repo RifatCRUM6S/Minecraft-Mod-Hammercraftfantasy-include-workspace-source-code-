@@ -51,5 +51,6 @@ public class HammercraftfantasyModEntityRenderers {
 		event.registerEntityRenderer(HammercraftfantasyModEntities.ERICSPAWN.get(), EricspawnRenderer::new);
 		event.registerEntityRenderer(HammercraftfantasyModEntities.MAGGOTLORD.get(), MaggotlordRenderer::new);
 		event.registerEntityRenderer(HammercraftfantasyModEntities.TZAANGORHALBERD.get(), TzaangorhalberdRenderer::new);
+		event.registerEntityRenderer(HammercraftfantasyModEntities.DEMONTHRALL.get(), DemonthrallRenderer::new);
 	}
 }

@@ -43,18 +43,23 @@ public class HammercraftfantasyModTabs {
 				tabData.accept(HammercraftfantasyModItems.DECEITANDSCHEME_BOOTS.get());
 				tabData.accept(HammercraftfantasyModItems.RAGEESSENCE.get());
 				tabData.accept(HammercraftfantasyModItems.RAGEINGOT.get());
+				tabData.accept(HammercraftfantasyModItems.KHORNETEMPLATE.get());
 				tabData.accept(HammercraftfantasyModItems.DECEITESSENCE.get());
 				tabData.accept(HammercraftfantasyModItems.DECEITINGOT.get());
+				tabData.accept(HammercraftfantasyModItems.TZEENTCHTEMPLATE.get());
 				tabData.accept(HammercraftfantasyModItems.OBSESSIONESSENCE.get());
 				tabData.accept(HammercraftfantasyModItems.OBSESSIONINGOT.get());
+				tabData.accept(HammercraftfantasyModItems.SLAANESHTEMPLATE.get());
 				tabData.accept(HammercraftfantasyModItems.CORRUPTIONESSENCE.get());
 				tabData.accept(HammercraftfantasyModItems.CORRUPTIONINGOT.get());
+				tabData.accept(HammercraftfantasyModItems.NURGLETEMPLATE.get());
 				tabData.accept(HammercraftfantasyModItems.RAGEBATTLEAXE.get());
 				tabData.accept(HammercraftfantasyModItems.RAGEMATTER.get());
 				tabData.accept(HammercraftfantasyModItems.DECEITMATTER.get());
 				tabData.accept(HammercraftfantasyModItems.OBSESSIONMATTER.get());
 				tabData.accept(HammercraftfantasyModItems.CORRUPTIONMATTER.get());
 				tabData.accept(HammercraftfantasyModItems.DEMONSMETALNUGGET.get());
+				tabData.accept(HammercraftfantasyModItems.DEMONSMETALINGOT.get());
 				tabData.accept(HammercraftfantasyModBlocks.CRYSTALSAND.get().asItem());
 				tabData.accept(HammercraftfantasyModBlocks.PLAGUELOG.get().asItem());
 				tabData.accept(HammercraftfantasyModBlocks.PLAGUELEAVES.get().asItem());
@@ -100,6 +105,8 @@ public class HammercraftfantasyModTabs {
 				tabData.accept(HammercraftfantasyModBlocks.S_CHAMPION_SUMMON_ALTAR.get().asItem());
 				tabData.accept(HammercraftfantasyModItems.RINGOFLUST_HELMET.get());
 				tabData.accept(HammercraftfantasyModBlocks.DEMONSTEELORE.get().asItem());
+				tabData.accept(HammercraftfantasyModItems.DEMONSTRUENAME.get());
+				tabData.accept(HammercraftfantasyModItems.SILVERSHARPSWORD.get());
 			}).build());
 
 	@SubscribeEvent
@@ -148,6 +155,7 @@ public class HammercraftfantasyModTabs {
 			tabData.accept(HammercraftfantasyModItems.DEMONSTEELSHOVEL.get());
 			tabData.accept(HammercraftfantasyModItems.DEMONSTEELHOE.get());
 			tabData.accept(HammercraftfantasyModItems.RITUALDAGGER.get());
+			tabData.accept(HammercraftfantasyModItems.SILVERSHARPSWORD.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
 			tabData.accept(HammercraftfantasyModItems.RAGEANDFURY_HELMET.get());
 			tabData.accept(HammercraftfantasyModItems.RAGEANDFURY_CHESTPLATE.get());
@@ -190,6 +198,14 @@ public class HammercraftfantasyModTabs {
 			tabData.accept(HammercraftfantasyModItems.SCHAMP_LEGGINGS.get());
 			tabData.accept(HammercraftfantasyModItems.SCHAMP_BOOTS.get());
 			tabData.accept(HammercraftfantasyModItems.RINGOFLUST_HELMET.get());
+			tabData.accept(HammercraftfantasyModItems.DEMONSTRUENAME.get());
+			tabData.accept(HammercraftfantasyModItems.SILVERSHARPSWORD.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+			tabData.accept(HammercraftfantasyModItems.KHORNETEMPLATE.get());
+			tabData.accept(HammercraftfantasyModItems.TZEENTCHTEMPLATE.get());
+			tabData.accept(HammercraftfantasyModItems.SLAANESHTEMPLATE.get());
+			tabData.accept(HammercraftfantasyModItems.NURGLETEMPLATE.get());
+			tabData.accept(HammercraftfantasyModItems.DEMONSMETALINGOT.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
 			tabData.accept(HammercraftfantasyModItems.GRANDFATHERSSOUP.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

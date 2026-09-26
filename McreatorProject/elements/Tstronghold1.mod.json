@@ -9,8 +9,8 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 16,
-    "separation": 10,
+    "spacing": 20,
+    "separation": 15,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Schemeforest"

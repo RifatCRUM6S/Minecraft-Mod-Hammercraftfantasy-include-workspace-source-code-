@@ -22,10 +22,10 @@
       }
     ],
     "armorTextureFile": "rage_and_fury",
-    "helmetName": "Rage and fury头盔",
-    "bodyName": "Rage and fury胸甲",
-    "leggingsName": "Rageandfury护腿",
-    "bootsName": "Rageandfury靴子",
+    "helmetName": "Rage and fury helmet",
+    "bodyName": "Rage and fury chestplate",
+    "leggingsName": "Rage and fury legging",
+    "bootsName": "Rage and fury boots",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
@@ -94,13 +94,13 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 37,
+    "maxDamage": 40,
     "damageValueHelmet": 5,
     "damageValueBody": 8,
     "damageValueLeggings": 7,
     "damageValueBoots": 4,
     "enchantability": 25,
-    "toughness": 4.0,
+    "toughness": 2.0,
     "knockbackResistance": 0.1,
     "equipSound": {
       "value": ""
@@ -108,6 +108,9 @@
     "repairItems": [
       {
         "value": "Items.NETHERITE_INGOT"
+      },
+      {
+        "value": "CUSTOM:Rageingot"
       }
     ],
     "rarity": "UNCOMMON"

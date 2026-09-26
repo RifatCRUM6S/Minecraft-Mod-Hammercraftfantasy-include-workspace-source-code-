@@ -9,7 +9,7 @@
   ],
   "spawners": {
     "type": "hammercraftfantasy:blue_horror",
-    "weight": 40,
+    "weight": 60,
     "minCount": 4,
     "maxCount": 4
   }

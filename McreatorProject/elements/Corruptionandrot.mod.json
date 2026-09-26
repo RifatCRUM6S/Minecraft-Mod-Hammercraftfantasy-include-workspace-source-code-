@@ -22,10 +22,10 @@
       }
     ],
     "armorTextureFile": "corruption_and_rot",
-    "helmetName": "Corruption and rot头盔",
-    "bodyName": "Corruption and rot胸甲",
-    "leggingsName": "Corruption and rot护腿",
-    "bootsName": "Corruption and rot靴子",
+    "helmetName": "Corruption and rot helmet",
+    "bodyName": "Corruption and rot chestplate",
+    "leggingsName": "Corruption and rot legging",
+    "bootsName": "Corruption and rot boots",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
@@ -94,7 +94,7 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 37,
+    "maxDamage": 40,
     "damageValueHelmet": 4,
     "damageValueBody": 8,
     "damageValueLeggings": 6,
@@ -108,6 +108,9 @@
     "repairItems": [
       {
         "value": "Items.NETHERITE_INGOT"
+      },
+      {
+        "value": "CUSTOM:Corruptioningot"
       }
     ],
     "rarity": "UNCOMMON"

@@ -14,6 +14,10 @@ public class NchampgiveeffectProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(MobEffects.POISON)) {
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(MobEffects.POISON);
+		}
 		if (world.dayTime() % 20 == 0) {
 			if ((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == HammercraftfantasyModItems.NCHAMP_BOOTS.get()
 					&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == HammercraftfantasyModItems.NCHAMP_LEGGINGS.get()

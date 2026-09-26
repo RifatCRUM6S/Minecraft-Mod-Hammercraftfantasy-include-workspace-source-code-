@@ -22,10 +22,10 @@
       }
     ],
     "armorTextureFile": "k_champarmor",
-    "helmetName": "Khorne champion 头盔",
-    "bodyName": "Khorne champion 胸甲",
-    "leggingsName": "Khorne champion 护腿",
-    "bootsName": "Khorne champion 靴子",
+    "helmetName": "Khorne champion helmet",
+    "bodyName": "Khorne champion chestplate",
+    "leggingsName": "Khorne champion legging",
+    "bootsName": "Khorne champion boots",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
@@ -94,13 +94,13 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 40,
+    "maxDamage": 100,
     "damageValueHelmet": 6,
     "damageValueBody": 9,
     "damageValueLeggings": 9,
     "damageValueBoots": 6,
     "enchantability": 25,
-    "toughness": 3.0,
+    "toughness": 4.0,
     "knockbackResistance": 0.2,
     "equipSound": {
       "value": ""

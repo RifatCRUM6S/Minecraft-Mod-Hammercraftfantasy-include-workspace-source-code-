@@ -11,7 +11,14 @@
     "animations": [],
     "name": "Demonsmetalingot",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:HammercraftFitems"
+      },
+      {
+        "value": "MATERIALS"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,

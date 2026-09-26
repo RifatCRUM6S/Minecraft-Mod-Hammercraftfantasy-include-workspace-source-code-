@@ -166,7 +166,7 @@ public class PinkHorrorArrowEntity extends AbstractArrow implements ItemSupplier
         
         entityarrow.setSilent(true);
         entityarrow.setBaseDamage(12);
-        entityarrow.setKnockback(1);
+        entityarrow.setKnockback(0);
         entity.level().addFreshEntity(entityarrow);
         return entityarrow;
     }

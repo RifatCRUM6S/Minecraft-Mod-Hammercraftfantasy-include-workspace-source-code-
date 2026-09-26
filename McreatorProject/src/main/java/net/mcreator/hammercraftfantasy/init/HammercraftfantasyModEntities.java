@@ -157,6 +157,10 @@ public class HammercraftfantasyModEntities {
 			EntityType.Builder.<TzaangorhalberdEntity>of(TzaangorhalberdEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<DemonthrallEntity>> DEMONTHRALL = register("demonthrall",
+			EntityType.Builder.<DemonthrallEntity>of(DemonthrallEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune()
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -199,6 +203,7 @@ public class HammercraftfantasyModEntities {
 		EricspawnEntity.init(event);
 		MaggotlordEntity.init(event);
 		TzaangorhalberdEntity.init(event);
+		DemonthrallEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -236,5 +241,6 @@ public class HammercraftfantasyModEntities {
 		event.put(ERICSPAWN.get(), EricspawnEntity.createAttributes().build());
 		event.put(MAGGOTLORD.get(), MaggotlordEntity.createAttributes().build());
 		event.put(TZAANGORHALBERD.get(), TzaangorhalberdEntity.createAttributes().build());
+		event.put(DEMONTHRALL.get(), DemonthrallEntity.createAttributes().build());
 	}
 }

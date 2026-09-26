@@ -223,15 +223,17 @@ public class EricspawnEntity extends Monster {
     }
 
     /**
-     * 像凋零一样破坏指定 AABB 范围内的方块
+     * 破坏指定 AABB 范围内的方块（强制避开实体脚下地面）
      */
     private void destroyBlocksInAABB(AABB area) {
         if (this.level().isClientSide() || !this.level().getGameRules().getBoolean(net.minecraft.world.level.GameRules.RULE_MOBGRIEFING)) {
             return;
         }
 
+        int feetY = this.blockPosition().getY();
+
         int minX = Mth.floor(area.minX);
-        int minY = Mth.floor(area.minY);
+        int minY = Math.max(feetY + 1, Mth.floor(area.minY)); // 确保最低只破坏脚底线以上 1 格的方块，绝不破坏脚踩的地面
         int minZ = Mth.floor(area.minZ);
         int maxX = Mth.floor(area.maxX);
         int maxY = Mth.floor(area.maxY);
@@ -245,7 +247,7 @@ public class EricspawnEntity extends Monster {
                     BlockPos pos = new BlockPos(x, y, z);
                     BlockState state = this.level().getBlockState(pos);
 
-                    if (!state.isAir() && canDestroyBlock(state)) {
+                    if (!state.isAir() && canDestroyBlock(state, pos)) {
                         brokeAnyBlock = this.level().destroyBlock(pos, true, this) || brokeAnyBlock;
                     }
                 }
@@ -261,8 +263,8 @@ public class EricspawnEntity extends Monster {
     /**
      * 判断方块是否可破坏（排除基岩、末影龙/凋零免伤方块等）
      */
-    private boolean canDestroyBlock(BlockState state) {
-        return state.getDestroySpeed(this.level(), BlockPos.ZERO) >= 0 
+    private boolean canDestroyBlock(BlockState state, BlockPos pos) {
+        return state.getDestroySpeed(this.level(), pos) >= 0 
             && !state.is(net.minecraft.tags.BlockTags.WITHER_IMMUNE);
     }
 
@@ -271,9 +273,10 @@ public class EricspawnEntity extends Monster {
         super.tick();
 
         if (!this.level().isClientSide()) {
-            // --- 类似凋零的常态移动/碰撞破坏 (碰撞箱略加宽) ---
-            if (this.tickCount % 10 == 0) {
-                destroyBlocksInAABB(this.getBoundingBox().inflate(0.5, 0.2, 0.5));
+            // --- 常态平地巡逻/移动时破坏挡路的方块（水平方向拓宽，但高度仅限脚踏面以上） ---
+            if (this.tickCount % 8 == 0) {
+                AABB moveObstacleBox = this.getBoundingBox().inflate(0.5, 0.0, 0.5);
+                destroyBlocksInAABB(moveObstacleBox);
             }
 
             // --- 技能 1: 5-10秒 随机召唤落雷 ---
@@ -350,7 +353,7 @@ public class EricspawnEntity extends Monster {
                             this.getX() + 4.5, this.getY() + 2.5, this.getZ() + 4.5
                         );
 
-                        // 践踏攻击时粉碎范围内所有方块
+                        // 践踏攻击时只粉碎腰部/头部高度挡路的方块
                         destroyBlocksInAABB(earthSlamAOE);
 
                         List<LivingEntity> targets = this.level().getEntitiesOfClass(LivingEntity.class, earthSlamAOE,
@@ -427,9 +430,9 @@ public class EricspawnEntity extends Monster {
 
         boolean result = super.hurt(damagesource, amount);
 
-        // 受击时粉碎自身周围方块 (防止玩家用方块围困卡位)
+        // 受击时清理周围挡路的方块 (安全高度：Y > feetY)
         if (!this.level().isClientSide() && result) {
-            destroyBlocksInAABB(this.getBoundingBox().inflate(1.0, 1.0, 1.0));
+            destroyBlocksInAABB(this.getBoundingBox().inflate(1.0, 0.5, 1.0));
         }
 
         return result;

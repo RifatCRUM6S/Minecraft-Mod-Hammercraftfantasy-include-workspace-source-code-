@@ -138,6 +138,8 @@ public class HammercraftfantasyModItems {
 	public static final DeferredItem<Item> RINGOFLUST_HELMET;
 	public static final DeferredItem<Item> CRYSTALGRASS;
 	public static final DeferredItem<Item> DEMONSTEELORE;
+	public static final DeferredItem<Item> DEMONSTRUENAME;
+	public static final DeferredItem<Item> SILVERSHARPSWORD;
 	static {
 		SKARBRAND_SPAWN_EGG = REGISTRY.register("skarbrand_spawn_egg", () -> new DeferredSpawnEggItem(HammercraftfantasyModEntities.SKARBRAND, -65536, -65536, new Item.Properties()));
 		DEMON_ESSENCE = REGISTRY.register("demon_essence", DemonEssenceItem::new);
@@ -147,8 +149,8 @@ public class HammercraftfantasyModItems {
 		DEMONEZ_SPAWN_EGG = REGISTRY.register("demonez_spawn_egg", () -> new DeferredSpawnEggItem(HammercraftfantasyModEntities.DEMONEZ, -1, -1, new Item.Properties()));
 		HERALDOF_KHORNE_SPAWN_EGG = REGISTRY.register("heraldof_khorne_spawn_egg", () -> new DeferredSpawnEggItem(HammercraftfantasyModEntities.HERALDOF_KHORNE, -6750208, -10079488, new Item.Properties()));
 		NURGLING_SPAWN_EGG = REGISTRY.register("nurgling_spawn_egg", () -> new DeferredSpawnEggItem(HammercraftfantasyModEntities.NURGLING, -13408768, -8091337, new Item.Properties()));
-		PINK_HORROR_SPAWN_EGG = REGISTRY.register("pink_horror_spawn_egg", () -> new DeferredSpawnEggItem(HammercraftfantasyModEntities.PINK_HORROR, -1, -1, new Item.Properties()));
-		BLUE_HORROR_SPAWN_EGG = REGISTRY.register("blue_horror_spawn_egg", () -> new DeferredSpawnEggItem(HammercraftfantasyModEntities.BLUE_HORROR, -1, -1, new Item.Properties()));
+		PINK_HORROR_SPAWN_EGG = REGISTRY.register("pink_horror_spawn_egg", () -> new DeferredSpawnEggItem(HammercraftfantasyModEntities.PINK_HORROR, -26113, -3342337, new Item.Properties()));
+		BLUE_HORROR_SPAWN_EGG = REGISTRY.register("blue_horror_spawn_egg", () -> new DeferredSpawnEggItem(HammercraftfantasyModEntities.BLUE_HORROR, -6684673, -26113, new Item.Properties()));
 		CHAOSTHORN = block(HammercraftfantasyModBlocks.CHAOSTHORN);
 		RAGEANDFURY_HELMET = REGISTRY.register("rageandfury_helmet", RageandfuryItem.Helmet::new);
 		RAGEANDFURY_CHESTPLATE = REGISTRY.register("rageandfury_chestplate", RageandfuryItem.Chestplate::new);
@@ -260,6 +262,8 @@ public class HammercraftfantasyModItems {
 		RINGOFLUST_HELMET = REGISTRY.register("ringoflust_helmet", RingoflustItem.Helmet::new);
 		CRYSTALGRASS = block(HammercraftfantasyModBlocks.CRYSTALGRASS);
 		DEMONSTEELORE = block(HammercraftfantasyModBlocks.DEMONSTEELORE);
+		DEMONSTRUENAME = REGISTRY.register("demonstruename", DemonstruenameItem::new);
+		SILVERSHARPSWORD = REGISTRY.register("silversharpsword", SilversharpswordItem::new);
 	}
 
 	// Start of user code block custom items

@@ -50,7 +50,7 @@ public abstract class DeceitandschemeItem extends ArmorItem {
                 map.put(ArmorItem.Type.CHESTPLATE, 8);
                 map.put(ArmorItem.Type.HELMET, 4);
                 map.put(ArmorItem.Type.BODY, 8);
-            }), 25, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(Items.NETHERITE_INGOT)), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:deceit_and_scheme"))), 4f, 0.1f);
+            }), 25, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(Items.NETHERITE_INGOT), new ItemStack(HammercraftfantasyModItems.DECEITINGOT.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:deceit_and_scheme"))), 3f, 0.1f);
             registerHelper.register(ResourceLocation.parse("hammercraftfantasy:deceitandscheme"), armorMaterial);
             ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
         });

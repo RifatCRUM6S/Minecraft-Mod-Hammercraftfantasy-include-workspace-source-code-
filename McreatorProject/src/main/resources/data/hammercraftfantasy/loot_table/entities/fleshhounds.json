@@ -20,7 +20,7 @@
         {
           "type": "minecraft:item",
           "name": "hammercraftfantasy:rageessence",
-          "weight": 15,
+          "weight": 18,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -34,7 +34,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:skeleton_skull",
-          "weight": 5,
+          "weight": 2,
           "functions": [
             {
               "function": "minecraft:set_count",

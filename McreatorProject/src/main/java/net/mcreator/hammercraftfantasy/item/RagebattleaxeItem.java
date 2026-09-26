@@ -34,7 +34,7 @@ public class RagebattleaxeItem extends AxeItem {
 
 		@Override
 		public int getEnchantmentValue() {
-			return 2;
+			return 15;
 		}
 
 		@Override
@@ -44,6 +44,6 @@ public class RagebattleaxeItem extends AxeItem {
 	};
 
 	public RagebattleaxeItem() {
-		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 9f, -2.4f)).rarity(Rarity.UNCOMMON).fireResistant());
+		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 10f, -2.4f)).rarity(Rarity.UNCOMMON).fireResistant());
 	}
 }

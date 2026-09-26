@@ -49,8 +49,8 @@ public abstract class CorruptionandrotItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 8);
 				map.put(ArmorItem.Type.HELMET, 4);
 				map.put(ArmorItem.Type.BODY, 8);
-			}), 15, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(Items.NETHERITE_INGOT)), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:corruption_and_rot"))), 4f,
-					0.1f);
+			}), 15, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(Items.NETHERITE_INGOT), new ItemStack(HammercraftfantasyModItems.CORRUPTIONINGOT.get())),
+					List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:corruption_and_rot"))), 4f, 0.1f);
 			registerHelper.register(ResourceLocation.parse("hammercraftfantasy:corruptionandrot"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
@@ -142,7 +142,7 @@ public abstract class CorruptionandrotItem extends ArmorItem {
 
 	public static class Helmet extends CorruptionandrotItem {
 		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/corruption_and_rot_layer_1.png");
@@ -155,7 +155,7 @@ public abstract class CorruptionandrotItem extends ArmorItem {
 
 	public static class Chestplate extends CorruptionandrotItem {
 		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/corruption_and_rot_layer_1.png");
@@ -176,7 +176,7 @@ public abstract class CorruptionandrotItem extends ArmorItem {
 
 	public static class Leggings extends CorruptionandrotItem {
 		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/corruption_and_rot_layer_1.png");
@@ -189,7 +189,7 @@ public abstract class CorruptionandrotItem extends ArmorItem {
 
 	public static class Boots extends CorruptionandrotItem {
 		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/corruption_and_rot_layer_1.png");

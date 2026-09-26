@@ -16,7 +16,7 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.6
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
@@ -29,11 +29,11 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -1,
+      "value": -26113,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -1,
+      "value": -3342337,
       "falpha": 0.0
     },
     "spawnEggTexture": "",
@@ -72,9 +72,9 @@
     "stepHeight": 0.6,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 24,
+    "followRange": 12,
     "health": 20,
-    "xpAmount": 0,
+    "xpAmount": 10,
     "waterMob": false,
     "breatheUnderwater": {
       "fixedValue": false
@@ -126,7 +126,7 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"java_code\"><field name=\"CODE\">this.targetSelector.addGoal(1, new net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal&lt;net.minecraft.world.entity.LivingEntity&gt;(this, net.minecraft.world.entity.LivingEntity.class, 10, true, false, target -&gt; target != null &amp;&amp; target.isAlive() &amp;&amp; !target.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse(\"hammercraftfantasy:tzeentch_mobs\")))));</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"java_code\"><field name=\"CODE\">this.targetSelector.addGoal(1, new net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal&lt;net.minecraft.world.entity.LivingEntity&gt;(this, net.minecraft.world.entity.LivingEntity.class, 10, true, false, target -&gt; target != null &amp;&amp; target.isAlive() &amp;&amp; !target.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse(\"hammercraftfantasy:tzeentch_mobs\")))) { private int lockTicks = 0; private int rescanTicks = 0; private boolean isTargetValid(net.minecraft.world.entity.LivingEntity e) { return e != null &amp;&amp; e.isAlive() &amp;&amp; !e.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse(\"hammercraftfantasy:tzeentch_mobs\"))); } @Override public boolean canUse() { net.minecraft.world.entity.LivingEntity lastHurtBy = this.mob.getLastHurtByMob(); if (lastHurtBy != null &amp;&amp; lastHurtBy.isAlive() &amp;&amp; lockTicks &lt;= 0 &amp;&amp; isTargetValid(lastHurtBy)) { this.target = lastHurtBy; this.lockTicks = 60; return true; } return super.canUse(); } @Override public void start() { super.start(); if (this.lockTicks &lt;= 0) { this.lockTicks = 40; } } @Override public void tick() { super.tick(); if (this.lockTicks &gt; 0) { this.lockTicks--; } this.rescanTicks++; if (this.rescanTicks &gt;= 40) { this.rescanTicks = 0; if (this.lockTicks &gt; 0) return; net.minecraft.world.entity.LivingEntity currentTarget = this.mob.getTarget(); if (currentTarget == null || !currentTarget.isAlive()) return; double currentDistSqr = this.mob.distanceToSqr(currentTarget); net.minecraft.world.entity.LivingEntity closest = this.mob.level().getEntitiesOfClass(net.minecraft.world.entity.LivingEntity.class, this.mob.getBoundingBox().inflate(24.0), e -&gt; isTargetValid(e)).stream().min(java.util.Comparator.comparingDouble(e -&gt; this.mob.distanceToSqr(e))).orElse(null); if (closest != null &amp;&amp; closest != currentTarget &amp;&amp; this.mob.distanceToSqr(closest) &lt; currentDistSqr - 9.0) { this.mob.setTarget(closest); this.target = closest; this.lockTicks = 40; } } } });</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": false,
     "tameable": false,
     "breedTriggerItems": [],
@@ -135,14 +135,14 @@
       "value": "Items.FIRE_CHARGE"
     },
     "rangedItemType": "PinkHorrorArrow",
-    "rangedAttackInterval": 20,
-    "rangedAttackRadius": 10.0,
+    "rangedAttackInterval": 50,
+    "rangedAttackRadius": 8.0,
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 50,
+    "spawningProbability": 40,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 4,
+    "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:Schemedesert"

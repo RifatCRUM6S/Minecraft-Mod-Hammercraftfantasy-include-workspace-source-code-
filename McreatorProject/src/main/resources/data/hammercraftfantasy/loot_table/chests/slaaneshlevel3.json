@@ -677,6 +677,20 @@
               }
             }
           ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "hammercraftfantasy:silversharpsword",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
         }
       ]
     }

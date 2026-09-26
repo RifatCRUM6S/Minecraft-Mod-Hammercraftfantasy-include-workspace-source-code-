@@ -49,8 +49,8 @@ public abstract class ObsessionanddesireItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 8);
 				map.put(ArmorItem.Type.HELMET, 4);
 				map.put(ArmorItem.Type.BODY, 8);
-			}), 15, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(Items.NETHERITE_INGOT)), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:obsession_and_desire"))), 4f,
-					0.1f);
+			}), 15, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(Items.NETHERITE_INGOT), new ItemStack(HammercraftfantasyModItems.OBSESSIONINGOT.get())),
+					List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:obsession_and_desire"))), 3f, 0.1f);
 			registerHelper.register(ResourceLocation.parse("hammercraftfantasy:obsessionanddesire"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
@@ -142,7 +142,7 @@ public abstract class ObsessionanddesireItem extends ArmorItem {
 
 	public static class Helmet extends ObsessionanddesireItem {
 		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/obsession_and_desire_layer_1.png");
@@ -155,7 +155,7 @@ public abstract class ObsessionanddesireItem extends ArmorItem {
 
 	public static class Chestplate extends ObsessionanddesireItem {
 		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/obsession_and_desire_layer_1.png");
@@ -176,7 +176,7 @@ public abstract class ObsessionanddesireItem extends ArmorItem {
 
 	public static class Leggings extends ObsessionanddesireItem {
 		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/obsession_and_desire_layer_1.png");
@@ -189,7 +189,7 @@ public abstract class ObsessionanddesireItem extends ArmorItem {
 
 	public static class Boots extends ObsessionanddesireItem {
 		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/obsession_and_desire_layer_1.png");

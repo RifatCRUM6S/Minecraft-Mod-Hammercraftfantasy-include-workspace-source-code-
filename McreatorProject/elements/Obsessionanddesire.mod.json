@@ -22,10 +22,10 @@
       }
     ],
     "armorTextureFile": "obsession_and_desire",
-    "helmetName": "Obsession and desire 头盔",
-    "bodyName": "Obsession and desire 胸甲",
-    "leggingsName": "Obsession and desire 护腿",
-    "bootsName": "Obsession and desire 靴子",
+    "helmetName": "Obsession and desire helmet",
+    "bodyName": "Obsession and desire chestplate",
+    "leggingsName": "Obsession and desire legging",
+    "bootsName": "Obsession and desire boots",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
@@ -94,13 +94,13 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 37,
+    "maxDamage": 40,
     "damageValueHelmet": 4,
     "damageValueBody": 8,
     "damageValueLeggings": 6,
     "damageValueBoots": 4,
     "enchantability": 15,
-    "toughness": 4.0,
+    "toughness": 3.0,
     "knockbackResistance": 0.1,
     "equipSound": {
       "value": ""
@@ -108,6 +108,9 @@
     "repairItems": [
       {
         "value": "Items.NETHERITE_INGOT"
+      },
+      {
+        "value": "CUSTOM:Obsessioningot"
       }
     ],
     "rarity": "UNCOMMON"

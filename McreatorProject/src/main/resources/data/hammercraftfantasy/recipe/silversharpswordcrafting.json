@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    "bc ",
+    "d  "
+  ],
+  "key": {
+    "a": {
+      "item": "hammercraftfantasy:demonsmetalingot"
+    },
+    "b": {
+      "item": "minecraft:gold_nugget"
+    },
+    "c": {
+      "item": "hammercraftfantasy:obsessioningot"
+    },
+    "d": {
+      "item": "minecraft:breeze_rod"
+    }
+  },
+  "result": {
+    "id": "hammercraftfantasy:silversharpsword",
+    "count": 1
+  }
+}

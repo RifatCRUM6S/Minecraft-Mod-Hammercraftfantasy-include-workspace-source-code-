@@ -53,7 +53,8 @@ public abstract class RageandfuryItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 8);
 				map.put(ArmorItem.Type.HELMET, 5);
 				map.put(ArmorItem.Type.BODY, 8);
-			}), 25, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(Items.NETHERITE_INGOT)), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:rage_and_fury"))), 4f, 0.1f);
+			}), 25, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(Items.NETHERITE_INGOT), new ItemStack(HammercraftfantasyModItems.RAGEINGOT.get())),
+					List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:rage_and_fury"))), 2f, 0.1f);
 			registerHelper.register(ResourceLocation.parse("hammercraftfantasy:rageandfury"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
@@ -152,7 +153,7 @@ public abstract class RageandfuryItem extends ArmorItem {
 
 	public static class Helmet extends RageandfuryItem {
 		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/rage_and_fury_layer_1.png");
@@ -165,7 +166,7 @@ public abstract class RageandfuryItem extends ArmorItem {
 
 	public static class Chestplate extends RageandfuryItem {
 		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/rage_and_fury_layer_1.png");
@@ -186,7 +187,7 @@ public abstract class RageandfuryItem extends ArmorItem {
 
 	public static class Leggings extends RageandfuryItem {
 		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/rage_and_fury_layer_1.png");
@@ -199,7 +200,7 @@ public abstract class RageandfuryItem extends ArmorItem {
 
 	public static class Boots extends RageandfuryItem {
 		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(37)).rarity(Rarity.UNCOMMON));
+			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40)).rarity(Rarity.UNCOMMON));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/rage_and_fury_layer_1.png");

@@ -2,146 +2,160 @@ package net.mcreator.hammercraftfantasy.entity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.RangedAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.projectile.SmallFireball;
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.Difficulty;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.tags.TagKey;
+import net.minecraft.core.registries.BuiltInRegistries;
 
-import java.util.Comparator;
+import net.mcreator.hammercraftfantasy.procedures.PinkHorror_ReplicateProcedure;
+import net.mcreator.hammercraftfantasy.init.HammercraftfantasyModEntities;
 
 public class PinkHorrorEntity extends Monster implements RangedAttackMob {
+	public PinkHorrorEntity(EntityType<PinkHorrorEntity> type, Level world) {
+		super(type, world);
+		xpReward = 10;
+		setNoAi(false);
+	}
 
-    public PinkHorrorEntity(EntityType<? extends Monster> type, Level world) {
-        super(type, world);
-        xpReward = 15;
-        setNoAi(false);
-    }
+	@Override
+	protected void registerGoals() {
+		super.registerGoals();
+		this.targetSelector.addGoal(1, new net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<net.minecraft.world.entity.LivingEntity>(this, net.minecraft.world.entity.LivingEntity.class, 10, true, false, target -> target != null
+				&& target.isAlive() && !target.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse("hammercraftfantasy:tzeentch_mobs")))) {
+			private int lockTicks = 0;
+			private int rescanTicks = 0;
 
-    @Override
-    protected void registerGoals() {
-        super.registerGoals();
+			private boolean isTargetValid(net.minecraft.world.entity.LivingEntity e) {
+				return e != null && e.isAlive() && !e.getType().is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ENTITY_TYPE, net.minecraft.resources.ResourceLocation.parse("hammercraftfantasy:tzeentch_mobs")));
+			}
 
-        // 1. 动态索敌 Goal：防抽陀螺锁敌 + 奸奇 (Tzeentch) 阵营过滤
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<LivingEntity>(
-                this, LivingEntity.class, 10, true, false,
-                target -> isTargetValid(target)
-        ) {
-            private int lockTicks = 0;
-            private int rescanTicks = 0;
+			@Override
+			public boolean canUse() {
+				net.minecraft.world.entity.LivingEntity lastHurtBy = this.mob.getLastHurtByMob();
+				if (lastHurtBy != null && lastHurtBy.isAlive() && lockTicks <= 0 && isTargetValid(lastHurtBy)) {
+					this.target = lastHurtBy;
+					this.lockTicks = 60;
+					return true;
+				}
+				return super.canUse();
+			}
 
-            @Override
-            public boolean canUse() {
-                LivingEntity lastHurtBy = this.mob.getLastHurtByMob();
-                if (lastHurtBy != null && lastHurtBy.isAlive() && lockTicks <= 0 && isTargetValid(lastHurtBy)) {
-                    this.target = lastHurtBy;
-                    this.lockTicks = 60; // 受到攻击强行锁敌 3 秒
-                    return true;
-                }
-                return super.canUse();
-            }
+			@Override
+			public void start() {
+				super.start();
+				if (this.lockTicks <= 0) {
+					this.lockTicks = 40;
+				}
+			}
 
-            @Override
-            public void start() {
-                super.start();
-                if (this.lockTicks <= 0) {
-                    this.lockTicks = 40;
-                }
-            }
+			@Override
+			public void tick() {
+				super.tick();
+				if (this.lockTicks > 0) {
+					this.lockTicks--;
+				}
+				this.rescanTicks++;
+				if (this.rescanTicks >= 40) {
+					this.rescanTicks = 0;
+					if (this.lockTicks > 0)
+						return;
+					net.minecraft.world.entity.LivingEntity currentTarget = this.mob.getTarget();
+					if (currentTarget == null || !currentTarget.isAlive())
+						return;
+					double currentDistSqr = this.mob.distanceToSqr(currentTarget);
+					net.minecraft.world.entity.LivingEntity closest = this.mob.level().getEntitiesOfClass(net.minecraft.world.entity.LivingEntity.class, this.mob.getBoundingBox().inflate(24.0), e -> isTargetValid(e)).stream()
+							.min(java.util.Comparator.comparingDouble(e -> this.mob.distanceToSqr(e))).orElse(null);
+					if (closest != null && closest != currentTarget && this.mob.distanceToSqr(closest) < currentDistSqr - 9.0) {
+						this.mob.setTarget(closest);
+						this.target = closest;
+						this.lockTicks = 40;
+					}
+				}
+			}
+		});
+		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+			@Override
+			protected boolean canPerformAttack(LivingEntity entity) {
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
+			}
+		});
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25, 50, 8f) {
+			@Override
+			public boolean canContinueToUse() {
+				return this.canUse();
+			}
+		});
+	}
 
-            @Override
-            public void tick() {
-                super.tick();
-                if (this.lockTicks > 0) {
-                    this.lockTicks--;
-                }
+	@Override
+	public SoundEvent getAmbientSound() {
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("hammercraftfantasy:pinkhorror_breath"));
+	}
 
-                this.rescanTicks++;
-                if (this.rescanTicks >= 40) { // 每 2 秒重扫描一次
-                    this.rescanTicks = 0;
-                    if (this.lockTicks > 0) return;
+	@Override
+	public SoundEvent getHurtSound(DamageSource ds) {
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("hammercraftfantasy:pinkhorror_hurt"));
+	}
 
-                    LivingEntity currentTarget = this.mob.getTarget();
-                    if (currentTarget == null || !currentTarget.isAlive()) return;
+	@Override
+	public SoundEvent getDeathSound() {
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("hammercraftfantasy:bluehorror_dead"));
+	}
 
-                    double currentDistSqr = this.mob.distanceToSqr(currentTarget);
-                    LivingEntity closest = this.mob.level().getEntitiesOfClass(
-                        LivingEntity.class,
-                        this.mob.getBoundingBox().inflate(24.0),
-                        e -> isTargetValid(e)
-                    ).stream().min(Comparator.comparingDouble(e -> this.mob.distanceToSqr(e))).orElse(null);
+	@Override
+	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
+			return false;
+		return super.hurt(damagesource, amount);
+	}
 
-                    if (closest != null && closest != currentTarget && this.mob.distanceToSqr(closest) < currentDistSqr - 9.0) {
-                        this.mob.setTarget(closest);
-                        this.target = closest;
-                        this.lockTicks = 40;
-                    }
-                }
-            }
-        });
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		PinkHorror_ReplicateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+	}
 
-        // 2. 远程攻击 Goal：射击间隔已延长至 2.5 倍 (50 Ticks = 2.5秒)
-        this.goalSelector.addGoal(1, new RangedAttackGoal(this, 1.25D, 50, 20.0F));
-        this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1.0D));
-        this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
-        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(5, new FloatGoal(this));
-    }
+	@Override
+	public void performRangedAttack(LivingEntity target, float flval) {
+		PinkHorrorArrowEntity.shoot(this, target);
+	}
 
-    /**
-     * 目标有效性校验（过滤 奸奇/Tzeentch 阵营生物）
-     */
-    private boolean isTargetValid(LivingEntity e) {
-        return e != null
-            && e.isAlive()
-            && !e.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("hammercraftfantasy:tzeentch_mobs")));
-    }
+	public static void init(RegisterSpawnPlacementsEvent event) {
+		event.register(HammercraftfantasyModEntities.PINK_HORROR.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
+				RegisterSpawnPlacementsEvent.Operation.REPLACE);
+	}
 
-    /**
-     * 执行远程攻击：播放烈焰人发射音效
-     */
-    @Override
-    public void performRangedAttack(LivingEntity target, float distanceFactor) {
-        double d0 = target.getX() - this.getX();
-        double d1 = target.getY(0.5D) - this.getY(0.5D);
-        double d2 = target.getZ() - this.getZ();
-
-        // 修复 1.21.1 小火球的参数传递
-        SmallFireball projectile = new SmallFireball(this.level(), this, new Vec3(d0, d1, d2).normalize());
-        projectile.setPos(this.getX(), this.getY(0.5D) + 0.5D, this.getZ());
-        this.level().addFreshEntity(projectile);
-
-        // 使用烈焰人发射火球的音效
-        this.level().playSound(null, this.getX(), this.getY(), this.getZ(),
-                SoundEvents.BLAZE_SHOOT, SoundSource.HOSTILE, 1.0F, 1.0F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
-    }
-
-    public static void init(RegisterSpawnPlacementsEvent event) {
-    }
-
-    public static AttributeSupplier.Builder createAttributes() {
-        AttributeSupplier.Builder builder = Mob.createMobAttributes();
-        builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
-        builder = builder.add(Attributes.MAX_HEALTH, 40);
-        builder = builder.add(Attributes.ARMOR, 4);
-        builder = builder.add(Attributes.ATTACK_DAMAGE, 6);
-        builder = builder.add(Attributes.FOLLOW_RANGE, 24);
-        return builder;
-    }
+	public static AttributeSupplier.Builder createAttributes() {
+		AttributeSupplier.Builder builder = Mob.createMobAttributes();
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.23);
+		builder = builder.add(Attributes.MAX_HEALTH, 20);
+		builder = builder.add(Attributes.ARMOR, 0);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 10);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 12);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		return builder;
+	}
 }

@@ -10,6 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
@@ -52,7 +53,7 @@ public abstract class SchampItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 8);
 				map.put(ArmorItem.Type.HELMET, 6);
 				map.put(ArmorItem.Type.BODY, 8);
-			}), 25, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:s_champarmor"))), 3f, 0.2f);
+			}), 25, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:s_champarmor"))), 4f, 0.2f);
 			registerHelper.register(ResourceLocation.parse("hammercraftfantasy:schamp"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
@@ -144,7 +145,7 @@ public abstract class SchampItem extends ArmorItem {
 
 	public static class Helmet extends SchampItem {
 		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40)));
+			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(100)).rarity(Rarity.EPIC));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/s_champarmor.png");
@@ -157,7 +158,7 @@ public abstract class SchampItem extends ArmorItem {
 
 	public static class Chestplate extends SchampItem {
 		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40)));
+			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(100)).rarity(Rarity.EPIC));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/s_champarmor.png");
@@ -178,7 +179,7 @@ public abstract class SchampItem extends ArmorItem {
 
 	public static class Leggings extends SchampItem {
 		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40)));
+			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(100)).rarity(Rarity.EPIC));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/s_champarmor.png");
@@ -191,7 +192,7 @@ public abstract class SchampItem extends ArmorItem {
 
 	public static class Boots extends SchampItem {
 		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40)));
+			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(100)).rarity(Rarity.EPIC));
 		}
 
 		private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/s_champarmor.png");

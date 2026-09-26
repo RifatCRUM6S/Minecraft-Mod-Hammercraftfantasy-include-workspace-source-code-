@@ -22,10 +22,10 @@
       }
     ],
     "armorTextureFile": "s_champarmor",
-    "helmetName": "Slaanesh champion 头盔",
-    "bodyName": "Slaanesh champion 胸甲",
-    "leggingsName": "Slaanesh champion 护腿",
-    "bootsName": "Slaanesh champion 靴子",
+    "helmetName": "Slaanesh champion helmet",
+    "bodyName": "Slaanesh champion chestplate",
+    "leggingsName": "Slaanesh champion legging",
+    "bootsName": "Slaanesh champion boots",
     "helmetSpecialInformation": {
       "fixedValue": []
     },
@@ -94,18 +94,18 @@
     "bootsPiglinNeutral": {
       "fixedValue": false
     },
-    "maxDamage": 40,
+    "maxDamage": 100,
     "damageValueHelmet": 6,
     "damageValueBody": 8,
     "damageValueLeggings": 8,
     "damageValueBoots": 6,
     "enchantability": 25,
-    "toughness": 3.0,
+    "toughness": 4.0,
     "knockbackResistance": 0.2,
     "equipSound": {
       "value": ""
     },
     "repairItems": [],
-    "rarity": "COMMON"
+    "rarity": "EPIC"
   }
 }

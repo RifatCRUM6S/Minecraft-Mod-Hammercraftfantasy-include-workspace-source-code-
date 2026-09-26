@@ -6,9 +6,11 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
 
+import net.mcreator.hammercraftfantasy.procedures.Gardenershoe_hitentityProcedure;
 import net.mcreator.hammercraftfantasy.init.HammercraftfantasyModItems;
 
 public class GardenershoeItem extends SwordItem {
@@ -46,5 +48,12 @@ public class GardenershoeItem extends SwordItem {
 
 	public GardenershoeItem() {
 		super(TOOL_TIER, new Item.Properties().attributes(SwordItem.createAttributes(TOOL_TIER, 17f, -3.2f)));
+	}
+
+	@Override
+	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
+		Gardenershoe_hitentityProcedure.execute(entity);
+		return retval;
 	}
 }

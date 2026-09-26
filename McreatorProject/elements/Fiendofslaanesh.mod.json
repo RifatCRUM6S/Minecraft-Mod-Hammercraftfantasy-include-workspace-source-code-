@@ -100,8 +100,8 @@
     "stepHeight": 2.0,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 27,
-    "health": 60,
+    "followRange": 24,
+    "health": 80,
     "xpAmount": 20,
     "waterMob": false,
     "breatheUnderwater": {

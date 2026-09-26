@@ -8,6 +8,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -33,7 +34,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.particles.ColorParticleOption;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -92,7 +93,6 @@ public class GreatuncleanoneEntity extends Monster {
     protected void registerGoals() {
         super.registerGoals();
 
-        // 1. 动态索敌 Goal：防抽陀螺锁敌 + 纳垢 (Nurgle) 阵营过滤
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<LivingEntity>(
                 this, LivingEntity.class, 10, true, false,
                 target -> !this.isIntroPlaying() && isTargetValid(target)
@@ -107,7 +107,7 @@ public class GreatuncleanoneEntity extends Monster {
                 LivingEntity lastHurtBy = this.mob.getLastHurtByMob();
                 if (lastHurtBy != null && lastHurtBy.isAlive() && lockTicks <= 0 && isTargetValid(lastHurtBy)) {
                     this.target = lastHurtBy;
-                    this.lockTicks = 60; // 被攻击后强行锁定反击 3 秒
+                    this.lockTicks = 60;
                     return true;
                 }
                 return super.canUse();
@@ -129,7 +129,7 @@ public class GreatuncleanoneEntity extends Monster {
                 }
 
                 this.rescanTicks++;
-                if (this.rescanTicks >= 40) { // 每 2 秒重新扫描一次周围实体
+                if (this.rescanTicks >= 40) {
                     this.rescanTicks = 0;
                     if (this.lockTicks > 0) return;
 
@@ -152,7 +152,6 @@ public class GreatuncleanoneEntity extends Monster {
             }
         });
 
-        // 2. 近战/技能攻击 AI
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
             @Override
             public boolean canUse() {
@@ -180,7 +179,6 @@ public class GreatuncleanoneEntity extends Monster {
             }
         });
 
-        // 3. 受击反抗 AI
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this) {
             @Override
             public boolean canUse() {
@@ -188,7 +186,6 @@ public class GreatuncleanoneEntity extends Monster {
             }
         });
 
-        // 4. 随机漫步 AI
         this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8, 30) {
             @Override
             public boolean canUse() {
@@ -196,7 +193,6 @@ public class GreatuncleanoneEntity extends Monster {
             }
         });
 
-        // 5. 游泳 AI
         this.goalSelector.addGoal(4, new FloatGoal(this));
     }
 
@@ -221,7 +217,6 @@ public class GreatuncleanoneEntity extends Monster {
             this.lockedYRot = this.getYRot();
         }
 
-        // 设定技能权重: 60% Attack1, 5% 急速Attack1, 25% Attack2, 10% RangeAttack
         float rand = this.random.nextFloat();
         if (rand < 0.60F) {
             this.currentAttackMaxTicks = 45;
@@ -309,7 +304,7 @@ public class GreatuncleanoneEntity extends Monster {
                                     3, 0.6, 0.1, 0.6, 0.0);
                         }
                     }
-                } else if (state == 6) {
+                } else if (state == 6) { // 快速爪击
                     if (elapsedTicks == 8) {
                         this.level().playSound(null, this.getX(), this.getY(), this.getZ(),
                                 BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("hammercraftfantasy:havy_foot_steps")),
@@ -327,6 +322,9 @@ public class GreatuncleanoneEntity extends Monster {
                                 e -> e != this && e.isAlive() && !e.getType().is(net.minecraft.tags.TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("hammercraftfantasy:nurgle_mobs"))));
 
                         for (LivingEntity target : targets) {
+                            if (target.isBlocking() && target instanceof Player player) {
+                                player.disableShield(); // 无参调用，破盾并使盾牌进入冷却
+                            }
                             this.doHurtTarget(target);
                         }
 
@@ -337,7 +335,7 @@ public class GreatuncleanoneEntity extends Monster {
                                     5, 1.0, 0.1, 1.0, 0.0);
                         }
                     }
-                } else if (state == 3) {
+                } else if (state == 3) { // 泰山压顶
                     if (elapsedTicks == 20) {
                         this.setDeltaMovement(this.getDeltaMovement().x, 0.65D, this.getDeltaMovement().z);
                         this.hasImpulse = true;
@@ -358,21 +356,27 @@ public class GreatuncleanoneEntity extends Monster {
                                     this.getX(), this.getY(), this.getZ(), 6, 1.2, 0.2, 1.2, 0.0);
                         }
 
+                        double baseAttack = this.getAttributeValue(Attributes.ATTACK_DAMAGE);
                         List<LivingEntity> targets = this.level().getEntitiesOfClass(LivingEntity.class,
-                                this.getBoundingBox().inflate(9.0D),
+                                this.getBoundingBox().inflate(10.0D),
                                 e -> e != this && e.isAlive() && !e.getType().is(net.minecraft.tags.TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("hammercraftfantasy:nurgle_mobs"))));
 
                         for (LivingEntity entity : targets) {
                             double dist = this.distanceTo(entity);
                             float damage = 0.0F;
+
                             if (dist <= 5.0D) {
-                                damage = 40.0F;
-                            } else if (dist <= 7.0D) {
-                                damage = 16.0F;
-                            } else if (dist <= 9.0D) {
-                                damage = 8.0F;
+                                damage = (float) (baseAttack * 2.0F);  // 5格内2倍
+                            } else if (dist <= 8.0D) {
+                                damage = (float) (baseAttack * 0.7F);  // 8格内0.7倍
+                            } else if (dist <= 10.0D) {
+                                damage = (float) (baseAttack * 0.3F);  // 10格内0.3倍
                             }
+
                             if (damage > 0.0F) {
+                                if (entity.isBlocking() && entity instanceof Player player) {
+                                    player.disableShield(); // 无参调用，破盾
+                                }
                                 entity.hurt(this.damageSources().mobAttack(this), damage);
                                 entity.setDeltaMovement(entity.getDeltaMovement().add(0, 0.25 * ((10.0 - dist) / 10.0), 0));
                             }
@@ -386,21 +390,21 @@ public class GreatuncleanoneEntity extends Monster {
                         double bellyZ = this.getZ() + look.z * 1.3;
 
                         if (this.level() instanceof ServerLevel serverLevel) {
-                            for (int i = 0; i < 28; i++) {
-                                double offsetX = (this.random.nextDouble() - 0.5) * 3.5;
-                                double offsetY = (this.random.nextDouble() - 0.5) * 1.8;
-                                double offsetZ = (this.random.nextDouble() - 0.5) * 3.5;
+                            var particleType = BuiltInRegistries.PARTICLE_TYPE.get(ResourceLocation.parse("hammercraftfantasy:nurglepuke"));
+                            if (particleType instanceof SimpleParticleType simpleParticle) {
+                                for (int i = 0; i < 8; i++) {
+                                    double pX = bellyX + (this.random.nextDouble() - 0.5) * 2.2;
+                                    double pY = bellyY + (this.random.nextDouble() - 0.5) * 0.8;
+                                    double pZ = bellyZ + (this.random.nextDouble() - 0.5) * 2.2;
 
-                                boolean isWither = this.random.nextFloat() < 0.3F;
-                                float r = isWither ? 0.05F : 0.15F;
-                                float g = isWither ? 0.05F : 0.85F;
-                                float b = isWither ? 0.05F : 0.15F;
+                                    double forwardSpeed = 0.4 + this.random.nextDouble() * 0.4;
+                                    double spreadSide = (this.random.nextDouble() - 0.5) * 0.6;
+                                    double vx = look.x * forwardSpeed + look.z * spreadSide;
+                                    double vy = 0.25D + this.random.nextDouble() * 0.3D;
+                                    double vz = look.z * forwardSpeed - look.x * spreadSide;
 
-                                serverLevel.sendParticles(
-                                        ColorParticleOption.create(ParticleTypes.ENTITY_EFFECT, r, g, b),
-                                        bellyX + offsetX, bellyY + offsetY, bellyZ + offsetZ,
-                                        1, 0.15, 0.15, 0.15, 0.05
-                                );
+                                    serverLevel.sendParticles(simpleParticle, pX, pY, pZ, 0, vx, vy, vz, 1.0);
+                                }
                             }
                         }
 

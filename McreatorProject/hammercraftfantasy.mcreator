@@ -475,7 +475,7 @@
       "name": "PinkHorror",
       "type": "livingentity",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "pink_horror",
       "metadata": {
         "files": [
@@ -491,7 +491,7 @@
       "name": "BlueHorror",
       "type": "livingentity",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "blue_horror",
       "metadata": {
         "files": [
@@ -5172,6 +5172,104 @@
         ]
       },
       "path": "~/Dimention_Ocean_Of_Souls/Rot biomes"
+    },
+    {
+      "name": "Demonthrall",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "demonthrall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/hammercraftfantasy/client/renderer/DemonthrallRenderer.java",
+          "src/main/java/net/mcreator/hammercraftfantasy/entity/DemonthrallEntity.java"
+        ]
+      },
+      "path": "~/Demons/khorne_mobs"
+    },
+    {
+      "name": "Demonstruename",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "demonstruename",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/hammercraftfantasy/models/item/demonstruename.json",
+          "src/main/java/net/mcreator/hammercraftfantasy/item/DemonstruenameItem.java"
+        ]
+      },
+      "path": "~/Weapon and tools"
+    },
+    {
+      "name": "Gardenershoe_hitentity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gardenershoe_hitentity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/hammercraftfantasy/procedures/Gardenershoe_hitentityProcedure.java"
+        ]
+      },
+      "path": "~/Weapon and tools"
+    },
+    {
+      "name": "Silversharpsword_hitentity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silversharpsword_hitentity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/hammercraftfantasy/procedures/Silversharpsword_hitentityProcedure.java"
+        ]
+      },
+      "path": "~/Weapon and tools"
+    },
+    {
+      "name": "Silversharpsword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silversharpsword",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/hammercraftfantasy/item/SilversharpswordItem.java",
+          "src/main/resources/assets/hammercraftfantasy/models/item/silversharpsword.json"
+        ]
+      },
+      "path": "~/Weapon and tools"
+    },
+    {
+      "name": "Silversharpswordcrafting",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silversharpswordcrafting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/hammercraftfantasy/advancement/recipes/silversharpswordcrafting.json",
+          "src/main/resources/data/hammercraftfantasy/recipe/silversharpswordcrafting.json"
+        ]
+      },
+      "path": "~/Weapon and tools/crafting"
     }
   ],
   "variable_elements": [],
@@ -6006,10 +6104,8 @@
       "~Blocks.DIRT#1",
       "~Blocks.PURPUR_BLOCK"
     ],
-    "BIOMES:minecraft:has_structure/bastion_remnant": [
-      "~CUSTOM:Chaoshill"
-    ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:Silversharpsword",
       "~CUSTOM:Ritualdagger",
       "~CUSTOM:Demonsteelsword",
       "~CUSTOM:Gardenershoe",
@@ -6198,11 +6294,11 @@
       "biome.hammercraftfantasy.schemedesert": "Scheme desert",
       "biome.hammercraftfantasy.schemeforest": "Scheme desert",
       "biome.hammercraftfantasy.schemewastes": "Scheme desert",
-      "biome.hammercraftfantasy.pleasureplains": "Pleasureplains",
-      "biome.hammercraftfantasy.pleasurebeach": "Pleasureplains",
-      "biome.hammercraftfantasy.pleasure_garden": "Pleasureplains",
+      "biome.hammercraftfantasy.pleasureplains": "Pleasure plains",
+      "biome.hammercraftfantasy.pleasurebeach": "Pleasure plains",
+      "biome.hammercraftfantasy.pleasure_garden": "Pleasure plains",
       "biome.hammercraftfantasy.schemeforest_2": "Scheme forest 2",
-      "biome.hammercraftfantasy.pleasurewastes": "Pleasureplains",
+      "biome.hammercraftfantasy.pleasurewastes": "Pleasure plains",
       "item_group.hammercraftfantasy.hammercraft_fitems": "Hammercraft items",
       "item.hammercraftfantasy.hell_blade": "Hell blade",
       "entity.hammercraftfantasy.bloodletter": "Bloodletter",
@@ -6220,18 +6316,18 @@
       "entity.hammercraftfantasy.blue_horror": "Blue Horror",
       "item.hammercraftfantasy.blue_horror_spawn_egg": "Blue Horror Spawn Egg",
       "block.hammercraftfantasy.chaosthorn": "Chaosthorn",
-      "item.hammercraftfantasy.rageandfury_leggings": "Rage and fury Leggings",
-      "item.hammercraftfantasy.rageandfury_helmet": "Rage and fury Helmet",
-      "item.hammercraftfantasy.rageandfury_chestplate": "Rage and fury Chestplate",
-      "item.hammercraftfantasy.rageandfury_boots": "Rage and fury Boots",
-      "item.hammercraftfantasy.corruptionandrot_leggings": "Corruption and rot Leggings",
-      "item.hammercraftfantasy.corruptionandrot_helmet": "Corruption and rot Helmet",
-      "item.hammercraftfantasy.corruptionandrot_boots": "Corruption and rot Boots",
-      "item.hammercraftfantasy.corruptionandrot_chestplate": "Corruption and rot Chestplate",
-      "item.hammercraftfantasy.obsessionanddesire_chestplate": "Obsession and desire  Chestplate",
-      "item.hammercraftfantasy.obsessionanddesire_boots": "Obsession and desire Boots",
-      "item.hammercraftfantasy.obsessionanddesire_helmet": "Obsession and desire Helmet",
-      "item.hammercraftfantasy.obsessionanddesire_leggings": "Obsession and desire Leggings",
+      "item.hammercraftfantasy.rageandfury_leggings": "Rage and fury legging",
+      "item.hammercraftfantasy.rageandfury_helmet": "Rage and fury helmet",
+      "item.hammercraftfantasy.rageandfury_chestplate": "Rage and fury chestplate",
+      "item.hammercraftfantasy.rageandfury_boots": "Rage and fury boots",
+      "item.hammercraftfantasy.corruptionandrot_leggings": "Corruption and rot legging",
+      "item.hammercraftfantasy.corruptionandrot_helmet": "Corruption and rot helmet",
+      "item.hammercraftfantasy.corruptionandrot_boots": "Corruption and rot boots",
+      "item.hammercraftfantasy.corruptionandrot_chestplate": "Corruption and rot chestplate",
+      "item.hammercraftfantasy.obsessionanddesire_chestplate": "Obsession and desire chestplate",
+      "item.hammercraftfantasy.obsessionanddesire_boots": "Obsession and desire boots",
+      "item.hammercraftfantasy.obsessionanddesire_helmet": "Obsession and desire helmet",
+      "item.hammercraftfantasy.obsessionanddesire_leggings": "Obsession and desire legging",
       "item.hammercraftfantasy.deceitandscheme_leggings": "Deceit and scheme Leggings",
       "item.hammercraftfantasy.deceitandscheme_chestplate": "Deceit and scheme Chestplate",
       "item.hammercraftfantasy.deceitandscheme_helmet": "Deceit and scheme Helmet",
@@ -6240,23 +6336,23 @@
       "item.hammercraftfantasy.fleshhounds_spawn_egg": "Fleshhounds Spawn Egg",
       "item.hammercraftfantasy.rageessence": "Rage essence",
       "item.hammercraftfantasy.rageingot": "Rage ingot",
-      "item.hammercraftfantasy.khornetemplate": "Khorne Template",
+      "item.hammercraftfantasy.khornetemplate": "Khornetemplate",
       "item.hammercraftfantasy.deceitessence": "Deceit essence",
       "item.hammercraftfantasy.deceitingot": "Deceit ingot",
-      "item.hammercraftfantasy.tzeentchtemplate": "Tzeentch Template",
+      "item.hammercraftfantasy.tzeentchtemplate": "tzeentch template",
       "item.hammercraftfantasy.obsessionessence": "Obsession essence",
       "item.hammercraftfantasy.obsessioningot": "Obsession ingot",
-      "item.hammercraftfantasy.slaaneshtemplate": "Slaanesh Template",
+      "item.hammercraftfantasy.slaaneshtemplate": "slaanesh template",
       "item.hammercraftfantasy.corruptionessence": "Corruption essence",
       "item.hammercraftfantasy.corruptioningot": "Corruption ingot",
-      "item.hammercraftfantasy.nurgletemplate": "Nurgle Template",
+      "item.hammercraftfantasy.nurgletemplate": "nurgle template",
       "item.hammercraftfantasy.ragebattleaxe": "Rage battle axe",
       "item.hammercraftfantasy.ragematter": "Rage Matter",
       "item.hammercraftfantasy.deceitmatter": "Deceit Matter",
       "item.hammercraftfantasy.obsessionmatter": "Obsession Matter",
-      "item.hammercraftfantasy.corruptionmatter": "Corruption Matter",
+      "item.hammercraftfantasy.corruptionmatter": "corruption matter",
       "item.hammercraftfantasy.demonsmetalnugget": "Demons metal nugget",
-      "item.hammercraftfantasy.demonsmetalingot": "Demons metal ingot",
+      "item.hammercraftfantasy.demonsmetalingot": "Demonsmetalingot",
       "entity.hammercraftfantasy.kchaoswarrior": "Chaos warrior",
       "item.hammercraftfantasy.kchaoswarrior_spawn_egg": "Chaos warrior",
       "item.hammercraftfantasy.kcultist_spawn_egg": "cultist of khorne Spawn Egg",
@@ -6309,12 +6405,12 @@
       "subtitles.pb_breathing": "",
       "item.hammercraftfantasy.divineplague": "Divine Plague",
       "item.hammercraftfantasy.grandfatherssoup": "Grandfathers Soup",
-      "item.hammercraftfantasy.gardenershoe": "园丁镰",
-      "block.hammercraftfantasy.plagueplanks": "瘟疫木板",
+      "item.hammercraftfantasy.gardenershoe": "Gardenershoe",
+      "block.hammercraftfantasy.plagueplanks": "Plague planks",
       "subtitles.nagoxo_breath": "",
       "subtitles.nagoxo_hurt": "",
       "subtitles.nagoxo_death": "",
-      "entity.hammercraftfantasy.nagoxo": "Nagoxo",
+      "entity.hammercraftfantasy.nagoxo": "beast of nurgle",
       "item.hammercraftfantasy.nagoxo_spawn_egg": "Nagoxo Spawn Egg",
       "subtitles.guo_laugh1": "",
       "subtitles.guo_laugh2": "",
@@ -6323,7 +6419,7 @@
       "item.hammercraftfantasy.chaosspawn_spawn_egg": "Chaos spawn",
       "entity.hammercraftfantasy.chaosspawn": "Chaos spawn",
       "entity.hammercraftfantasy.forsaken": "Forsaken",
-      "item.hammercraftfantasy.forsaken_spawn_egg": "Forsaken",
+      "item.hammercraftfantasy.forsaken_spawn_egg": "Forsaken Spawn Egg",
       "item.hammercraftfantasy.keyofgarden": "Key of garden",
       "subtitles.havy_foot_steps": "",
       "item.hammercraftfantasy.fiendofslaanesh_spawn_egg": "Fiendofslaanesh Spawn Egg",
@@ -6415,36 +6511,36 @@
       "item.hammercraftfantasy.keyofthrone": "Key of throne",
       "item.hammercraftfantasy.keyoflibrary": "Key of library",
       "item.hammercraftfantasy.keyofpalace": "Key of palace",
-      "item.hammercraftfantasy.demonsteelsword": "Demonsteelsword",
-      "item.hammercraftfantasy.demonsteelaxe": "Demonsteelaxe",
-      "item.hammercraftfantasy.demonsteelpickaxe": "Demonsteelpickaxe",
-      "item.hammercraftfantasy.demonsteelshovel": "Demonsteelshovel",
-      "item.hammercraftfantasy.demonsteelhoe": "Demonsteelhoe",
-      "item.hammercraftfantasy.demonsteelarmor_boots": "Demonsteel Boots",
-      "item.hammercraftfantasy.demonsteelarmor_leggings": "Demonsteel Leggings",
-      "item.hammercraftfantasy.demonsteelarmor_helmet": "Demonsteel Helmet",
-      "item.hammercraftfantasy.demonsteelarmor_chestplate": "Demonsteel Chestplate",
+      "item.hammercraftfantasy.demonsteelsword": "Demonsteel sword",
+      "item.hammercraftfantasy.demonsteelaxe": "Demonsteel axe",
+      "item.hammercraftfantasy.demonsteelpickaxe": "Demonsteel pickaxe",
+      "item.hammercraftfantasy.demonsteelshovel": "Demonsteel shovel",
+      "item.hammercraftfantasy.demonsteelhoe": "Demonsteel hoe",
+      "item.hammercraftfantasy.demonsteelarmor_boots": "Demonsteel boots",
+      "item.hammercraftfantasy.demonsteelarmor_leggings": "Demonsteel legging",
+      "item.hammercraftfantasy.demonsteelarmor_helmet": "Demonsteel helmet",
+      "item.hammercraftfantasy.demonsteelarmor_chestplate": "Demonsteel chestplate",
       "block.hammercraftfantasy.changingglass": "Changing glass",
       "block.hammercraftfantasy.mazecrystal": "Mazecrystal",
       "item.hammercraftfantasy.ritualdagger": "Ritual dagger",
-      "item.hammercraftfantasy.flamershead": "Flamershead",
-      "block.hammercraftfantasy.trickystonebrick": "Trickystonebrick",
-      "item.hammercraftfantasy.kchamp_leggings": "Khorne champion Leggings",
-      "item.hammercraftfantasy.kchamp_chestplate": "Khorne champion Chestplate",
-      "item.hammercraftfantasy.kchamp_boots": "Khorne champion Boots",
-      "item.hammercraftfantasy.kchamp_helmet": "Khorne champion Helmet",
-      "item.hammercraftfantasy.nchamp_helmet": "Nurgle champion Helmet",
-      "item.hammercraftfantasy.nchamp_chestplate": "Nurgle champion Chestplate",
-      "item.hammercraftfantasy.nchamp_boots": "Nurgle champion Boots",
-      "item.hammercraftfantasy.nchamp_leggings": "Nurgle champion Leggings",
+      "item.hammercraftfantasy.flamershead": "Flamers head",
+      "block.hammercraftfantasy.trickystonebrick": "Tricky stonebrick",
+      "item.hammercraftfantasy.kchamp_leggings": "Khorne champion legging",
+      "item.hammercraftfantasy.kchamp_chestplate": "Khorne champion chestplate",
+      "item.hammercraftfantasy.kchamp_boots": "Khorne champion boots",
+      "item.hammercraftfantasy.kchamp_helmet": "Khorne champion helmet",
+      "item.hammercraftfantasy.nchamp_helmet": "Nurgle champion helmet",
+      "item.hammercraftfantasy.nchamp_chestplate": "Nurgle champion chestplate",
+      "item.hammercraftfantasy.nchamp_boots": "Nurgle champion boots",
+      "item.hammercraftfantasy.nchamp_leggings": "Nurgle champion legging",
       "item.hammercraftfantasy.tchamp_boots": "Tzeentch champion Boots",
       "item.hammercraftfantasy.tchamp_helmet": "Tzeentch champion Helmet",
       "item.hammercraftfantasy.tchamp_leggings": "Tzeentch champion Leggings",
       "item.hammercraftfantasy.tchamp_chestplate": "Tzeentch champion Chestplate",
-      "item.hammercraftfantasy.schamp_chestplate": "Slaanesh champion Chestplate",
-      "item.hammercraftfantasy.schamp_boots": "Slaanesh champion Boots",
-      "item.hammercraftfantasy.schamp_leggings": "Slaanesh champion Leggings",
-      "item.hammercraftfantasy.schamp_helmet": "Slaanesh champion Helmet",
+      "item.hammercraftfantasy.schamp_chestplate": "Slaanesh champion chestplate",
+      "item.hammercraftfantasy.schamp_boots": "Slaanesh champion boots",
+      "item.hammercraftfantasy.schamp_leggings": "Slaanesh champion legging",
+      "item.hammercraftfantasy.schamp_helmet": "Slaanesh champion helmet",
       "effect.hammercraftfantasy.hightsteps": "Hightsteps",
       "biome.hammercraftfantasy.kthrone": "Kthrone",
       "biome.hammercraftfantasy.ngarden": "Ngarden",
@@ -6517,7 +6613,10 @@
       "subtitles.skarbrand_rangeattack": "",
       "item.hammercraftfantasy.skarbrand_spawn_egg": "Skarbrand Spawn Egg",
       "block.hammercraftfantasy.crystalgrass": "Crystalgrass",
-      "block.hammercraftfantasy.demonsteelore": "Demonsteelore"
+      "block.hammercraftfantasy.demonsteelore": "Demonsteelore",
+      "entity.hammercraftfantasy.demonthrall": "Demonthrall",
+      "item.hammercraftfantasy.demonstruename": "Demons true name",
+      "item.hammercraftfantasy.silversharpsword": "Silver sharp sword"
     },
     "zh_cn": {
       "subtitles.skarbrand_music_1": "",
@@ -6531,18 +6630,18 @@
       "biome.hammercraftfantasy.bloodhill": "Blood hill",
       "biome.hammercraftfantasy.blood_forest_1": "Blood forest",
       "biome.hammercraftfantasy.blood_forest_2": "Bone forest",
-      "biome.hammercraftfantasy.rotrainforest": "Rotrainforest",
+      "biome.hammercraftfantasy.rotrainforest": "Rot rainforest",
       "biome.hammercraftfantasy.rotmarsh": "Rot marsh",
       "biome.hammercraftfantasy.rotgarden": "Rot garden",
       "biome.hammercraftfantasy.rothill": "Rot garden",
       "biome.hammercraftfantasy.schemedesert": "Scheme desert",
       "biome.hammercraftfantasy.schemeforest": "Scheme desert",
       "biome.hammercraftfantasy.schemewastes": "Scheme desert",
-      "biome.hammercraftfantasy.pleasureplains": "Pleasureplains",
-      "biome.hammercraftfantasy.pleasurebeach": "Pleasureplains",
-      "biome.hammercraftfantasy.pleasure_garden": "Pleasureplains",
+      "biome.hammercraftfantasy.pleasureplains": "Pleasure plains",
+      "biome.hammercraftfantasy.pleasurebeach": "Pleasure plains",
+      "biome.hammercraftfantasy.pleasure_garden": "Pleasure plains",
       "biome.hammercraftfantasy.schemeforest_2": "Scheme forest 2",
-      "biome.hammercraftfantasy.pleasurewastes": "Pleasureplains",
+      "biome.hammercraftfantasy.pleasurewastes": "Pleasure plains",
       "item_group.hammercraftfantasy.hammercraft_fitems": "Hammercraft 物品",
       "item.hammercraftfantasy.hell_blade": "割颅之刃",
       "entity.hammercraftfantasy.bloodletter": "放血鬼",
@@ -6856,8 +6955,11 @@
       "subtitles.skarbrand_attack4": "",
       "subtitles.skarbrand_rangeattack": "",
       "item.hammercraftfantasy.skarbrand_spawn_egg": "斯卡布兰德刷怪蛋",
-      "block.hammercraftfantasy.crystalgrass": "Crystalgrass",
-      "block.hammercraftfantasy.demonsteelore": "Demonsteelore"
+      "block.hammercraftfantasy.crystalgrass": "晶化草",
+      "block.hammercraftfantasy.demonsteelore": "恶魔钢矿石",
+      "entity.hammercraftfantasy.demonthrall": "被召唤的恶魔仆役",
+      "item.hammercraftfantasy.demonstruename": "恶魔真名",
+      "item.hammercraftfantasy.silversharpsword": "锋利银剑"
     }
   },
   "metadata": {
@@ -6993,17 +7095,19 @@
   },
   "workspaceSettings": {
     "modid": "hammercraftfantasy",
-    "modName": "HammercraftFantasy",
-    "version": "1.0.0",
-    "author": "MCreator",
-    "websiteURL": "https://mcreator.net",
-    "license": "Not specified",
+    "modName": "Hammercraft : Chaos Realm",
+    "version": "0.2.4",
+    "author": "Crum6sRifat",
+    "websiteURL": "https://github.com/RifatCRUM6S/Minecraft-Mod-Hammercraftfantasy-include-workspace-source-code-.git",
+    "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
+    "modPicture": "hammercraftfantasutexture",
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.hammercraftfantasy"
   },
   "mcreatorVersion": 202600114619

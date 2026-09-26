@@ -53,7 +53,6 @@ public class SkarbrandEntity extends Monster {
 
     private static final EntityDataAccessor<Integer> ANIMATION_STATE = 
         SynchedEntityData.defineId(SkarbrandEntity.class, EntityDataSerializers.INT);
-    // 【关键修复 1】：新增用于双端同步的攻击计时器
     private static final EntityDataAccessor<Integer> ATTACK_TIMER = 
         SynchedEntityData.defineId(SkarbrandEntity.class, EntityDataSerializers.INT);
 
@@ -80,6 +79,14 @@ public class SkarbrandEntity extends Monster {
     private double getAttackReachSqr(LivingEntity enemy) {
         double attackReach = (this.getBbWidth() + enemy.getBbWidth()) / 2.0 + 4.5;
         return attackReach * attackReach;
+    }
+
+    @Override
+    public void onAddedToLevel() {
+        super.onAddedToLevel();
+        if (!this.level().isClientSide()) {
+            playCustomSound("skarbrand_attack2", 2.5F, 1.0F);
+        }
     }
 
     @Override
@@ -252,7 +259,7 @@ public class SkarbrandEntity extends Monster {
 
     private void performFlameAreaDamage(double range, float damagePerHit) {
         Vec3 lookVec = getForwardVector();
-        Vec3 eyePos = this.position().add(0, this.getEyeHeight(), 0);
+        Vec3 eyePos = this.position().add(0, this.getEyeHeight() + 0.2D, 0);
 
         AABB searchBox = this.getBoundingBox().inflate(range);
         List<LivingEntity> targets = this.level().getEntitiesOfClass(LivingEntity.class, searchBox, entity -> 
@@ -278,17 +285,14 @@ public class SkarbrandEntity extends Monster {
         }
     }
 
-    /**
-     * 【关键修复 2】：更加稳健的粒子喷射方案
-     */
     private void spawnFlameParticles() {
         Vec3 look = getForwardVector();
-        // 稍微往嘴巴/头部前上方偏移
         double startX = this.getX() + look.x * 1.2;
-        double startY = this.getY() + this.getEyeHeight() * 0.9 + look.y * 1.2;
+        // 使用完整视线高度并额外增加 0.2D，匹配驼背模型嘴部位置
+        double startY = this.getY() + this.getEyeHeight() + 0.2D + look.y * 1.2;
         double startZ = this.getZ() + look.z * 1.2;
 
-        for (int i = 0; i < 12; i++) { // 增加粒子密度
+        for (int i = 0; i < 12; i++) {
             double speedScale = 0.6 + this.random.nextDouble() * 0.6;
             double vx = look.x * speedScale + (this.random.nextDouble() - 0.5) * 0.2;
             double vy = look.y * speedScale + (this.random.nextDouble() - 0.5) * 0.2;
@@ -305,9 +309,7 @@ public class SkarbrandEntity extends Monster {
         int state = this.entityData.get(ANIMATION_STATE);
         int timer = this.entityData.get(ATTACK_TIMER);
 
-        // 客户端逻辑
         if (this.level().isClientSide()) {
-            // 【关键修复 3】：基于倒计时 timer 直接判断粒子播放，不依赖本地未同步变量
             if (state == STATE_ATTACK_BERSERK && timer >= 10 && timer <= 50) {
                 spawnFlameParticles();
             }
@@ -319,7 +321,6 @@ public class SkarbrandEntity extends Monster {
             this.attackSlamAnimationState.animateWhen(state == STATE_ATTACK_SLAM, this.tickCount);
             this.attackBerserkAnimationState.animateWhen(state == STATE_ATTACK_BERSERK, this.tickCount);
         } else {
-            // 服务端逻辑
             if (timer > 0) {
                 this.getNavigation().stop();
                 this.setDeltaMovement(0, this.getDeltaMovement().y, 0);
@@ -339,7 +340,7 @@ public class SkarbrandEntity extends Monster {
 
                 // 1. STATE_ATTACK_LIGHT
                 if (state == STATE_ATTACK_LIGHT) {
-                    if (elapsedTicks == 1) playCustomSound("skarbrand_attack2", 2.0F, 1.0F);
+                    if (elapsedTicks == 1) playCustomSound("skarbrand_attack1and3", 2.0F, 1.0F);
                     if (elapsedTicks == 7) {
                         this.level().playSound(null, this.getX(), this.getY(), this.getZ(),
                             SoundEvents.PLAYER_ATTACK_SWEEP, SoundSource.HOSTILE, 1.4F, 0.9F + this.random.nextFloat() * 0.2F);
@@ -436,7 +437,6 @@ public class SkarbrandEntity extends Monster {
                     }
                 }
 
-                // 递减服务端和同步数据中的攻击倒计时
                 timer--;
                 this.entityData.set(ATTACK_TIMER, timer);
 

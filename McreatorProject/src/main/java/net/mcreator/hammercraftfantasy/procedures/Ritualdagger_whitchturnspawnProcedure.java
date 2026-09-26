@@ -1,7 +1,7 @@
 package net.mcreator.hammercraftfantasy.procedures;
 
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.SkullBlock;
+import net.minecraft.world.level.block.AbstractSkullBlock;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.npc.Villager;
@@ -29,14 +29,14 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.mcreator.hammercraftfantasy.init.HammercraftfantasyModEntities;
 import net.mcreator.hammercraftfantasy.entity.SkarbrandEntity;
 
-import java.util.ArrayList;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.List;
 
 @EventBusSubscriber
 public class Ritualdagger_whitchturnspawnProcedure {
 
-    // 存储斯卡布兰德召唤倒计时任务队列
-    private static final List<SummonDelayTask> delayTasks = new ArrayList<>();
+    // 使用并发安全的列表保存延迟任务
+    private static final List<SummonDelayTask> delayTasks = new CopyOnWriteArrayList<>();
 
     public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
         if (entity == null || !(world instanceof ServerLevel _level))
@@ -84,16 +84,16 @@ public class Ritualdagger_whitchturnspawnProcedure {
         // ==========================================
         // 功能 2：混沌魔域献祭大师级村民召唤斯卡布兰德
         // ==========================================
-        else if (currentDimension == ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "oceanofsouls"))) {
+        else if (currentDimension.equals(ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath("hammercraftfantasy", "oceanofsouls")))) {
             if (entity instanceof Villager villager) {
                 // 1. 检查村民等级：等级 >= 5 即为大师级村民
                 if (villager.getVillagerData().getLevel() >= 5) {
                     BlockPos targetPos = villager.blockPosition();
 
-                    // 2. 祭坛检测：统计周围半径 8 格区域内的头颅方块总数是否 >= 64
+                    // 2. 祭坛检测：统计周围半径 8 格区域内的头颅/颅骨方块总数是否 >= 64
                     if (countSkullsInRadius(_level, targetPos, 8) >= 64) {
                         
-                        // 3. 对村民造成 500 点真实/魔法伤害杀死村民，而不是直接 discard()
+                        // 3. 对村民造成 500 点魔法伤害杀死村民
                         villager.hurt(_level.damageSources().magic(), 500.0f);
 
                         // 4. 添加 120 刻 (6秒) 延迟召唤任务
@@ -110,7 +110,7 @@ public class Ritualdagger_whitchturnspawnProcedure {
     }
 
     /**
-     * 检查以 pos 为中心、指定半径（radius）的立方体区域内所有的头颅（SkullBlock）数量
+     * 检查以 pos 为中心、指定半径（radius）的立方体区域内所有的头颅（AbstractSkullBlock）数量
      */
     private static int countSkullsInRadius(Level level, BlockPos center, int radius) {
         int skullCount = 0;
@@ -122,8 +122,8 @@ public class Ritualdagger_whitchturnspawnProcedure {
                     mutablePos.set(center.getX() + x, center.getY() + y, center.getZ() + z);
                     BlockState state = level.getBlockState(mutablePos);
                     
-                    // 匹配任意继承自 SkullBlock 的头颅/颅骨方块
-                    if (state.getBlock() instanceof SkullBlock) {
+                    // 匹配 AbstractSkullBlock，兼容地面头颅与墙面放置的头颅
+                    if (state.getBlock() instanceof AbstractSkullBlock) {
                         skullCount++;
                     }
                 }
@@ -139,13 +139,14 @@ public class Ritualdagger_whitchturnspawnProcedure {
     public static void onServerTick(ServerTickEvent.Post event) {
         if (delayTasks.isEmpty()) return;
 
-        List<SummonDelayTask> toRemove = new ArrayList<>();
         for (SummonDelayTask task : delayTasks) {
             task.tick--;
 
-            // 混合粒子特效：灵魂火 + 普通火焰
-            task.level.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, task.x, task.y, task.z, 10, 1.2, 1.0, 1.2, 0.05);
-            task.level.sendParticles(ParticleTypes.FLAME, task.x, task.y, task.z, 10, 1.2, 1.0, 1.2, 0.05);
+            // 粒子特效
+            if (task.level != null) {
+                task.level.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, task.x, task.y, task.z, 10, 1.2, 1.0, 1.2, 0.05);
+                task.level.sendParticles(ParticleTypes.FLAME, task.x, task.y, task.z, 10, 1.2, 1.0, 1.2, 0.05);
+            }
 
             // 剩余 5 tick 时引发闪电
             if (task.tick == 5) {
@@ -162,10 +163,9 @@ public class Ritualdagger_whitchturnspawnProcedure {
                 boss.moveTo(task.x, task.y, task.z, 0, 0);
 
                 task.level.addFreshEntity(boss);
-                toRemove.add(task);
+                delayTasks.remove(task);
             }
         }
-        delayTasks.removeAll(toRemove);
     }
 
     /**

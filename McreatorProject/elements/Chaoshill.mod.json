@@ -122,7 +122,7 @@
     "oceanRuinType": "NONE",
     "spawnNetherBridge": false,
     "spawnNetherFossil": false,
-    "spawnBastionRemnant": true,
+    "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
     "spawnEntries": []

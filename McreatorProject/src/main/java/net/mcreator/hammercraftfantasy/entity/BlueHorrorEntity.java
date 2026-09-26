@@ -27,7 +27,7 @@ import net.mcreator.hammercraftfantasy.init.HammercraftfantasyModEntities;
 public class BlueHorrorEntity extends Monster {
 	public BlueHorrorEntity(EntityType<BlueHorrorEntity> type, Level world) {
 		super(type, world);
-		xpReward = 0;
+		xpReward = 5;
 		setNoAi(false);
 	}
 

@@ -50,7 +50,7 @@ public abstract class TchampItem extends ArmorItem {
                 map.put(ArmorItem.Type.CHESTPLATE, 8);
                 map.put(ArmorItem.Type.HELMET, 6);
                 map.put(ArmorItem.Type.BODY, 8);
-            }), 40, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:t_champ_armor"))), 3f, 0.2f);
+            }), 40, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("hammercraftfantasy:t_champ_armor"))), 4f, 0.2f);
             registerHelper.register(ResourceLocation.parse("hammercraftfantasy:tchamp"), armorMaterial);
             ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
         });
@@ -191,7 +191,7 @@ public abstract class TchampItem extends ArmorItem {
 
     public static class Helmet extends TchampItem {
         public Helmet() {
-            super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(40)).rarity(Rarity.EPIC));
+            super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(100)).rarity(Rarity.EPIC));
         }
 
         private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/t_champ_armor.png");
@@ -204,7 +204,7 @@ public abstract class TchampItem extends ArmorItem {
 
     public static class Chestplate extends TchampItem {
         public Chestplate() {
-            super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(40)).rarity(Rarity.EPIC));
+            super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(100)).rarity(Rarity.EPIC));
         }
 
         private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/t_champ_armor.png");
@@ -273,7 +273,7 @@ public abstract class TchampItem extends ArmorItem {
 
     public static class Leggings extends TchampItem {
         public Leggings() {
-            super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(40)).rarity(Rarity.EPIC));
+            super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(100)).rarity(Rarity.EPIC));
         }
 
         private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/t_champ_armor.png");
@@ -286,7 +286,7 @@ public abstract class TchampItem extends ArmorItem {
 
     public static class Boots extends TchampItem {
         public Boots() {
-            super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(40)).rarity(Rarity.EPIC));
+            super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(100)).rarity(Rarity.EPIC));
         }
 
         private final ResourceLocation armorTexture = ResourceLocation.parse("hammercraftfantasy:textures/entities/t_champ_armor.png");
